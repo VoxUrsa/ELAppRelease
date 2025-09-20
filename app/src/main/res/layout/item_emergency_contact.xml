@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- Emergency Contact Title -->
+    <TextView
+        android:id="@+id/contactTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/emergency_contact"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="?attr/colorPrimaryText"
+        android:paddingBottom="4dp" />
+
+    <!-- First Name Title -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="4dp"
+        android:text="@string/hint_first_name"
+        android:textColor="?attr/colorPrimaryText"
+        android:textSize="16sp" />
+
+    <!-- First Name -->
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        app:cardElevation="4dp"
+        app:cardCornerRadius="8dp"
+        app:cardUseCompatPadding="true"
+        app:strokeWidth="1dp"
+        app:strokeColor="?attr/colorCardStroke">
+
+        <EditText
+            android:id="@+id/ec_first_name"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:hint="@string/hint_first_name"
+            android:padding="12dp"
+            android:background="?attr/colorInputBackground"
+            android:textColor="?attr/colorInputText"
+            android:textColorHint="?attr/colorInputTextHint"
+            android:textSize="16sp"
+            android:inputType="textPersonName"
+            android:autofillHints="given-name" />
+    </com.google.android.material.card.MaterialCardView>
+
+    <!-- Last Name Title -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="4dp"
+        android:text="@string/hint_last_name"
+        android:textColor="?attr/colorPrimaryText"
+        android:textSize="16sp" />
+
+    <!-- Last Name -->
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        app:cardElevation="4dp"
+        app:cardCornerRadius="8dp"
+        app:cardUseCompatPadding="true"
+        app:strokeWidth="1dp"
+        app:strokeColor="?attr/colorCardStroke">
+
+        <EditText
+            android:id="@+id/ec_last_name"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:hint="@string/hint_last_name"
+            android:padding="12dp"
+            android:background="?attr/colorInputBackground"
+            android:textColor="?attr/colorInputText"
+            android:textColorHint="?attr/colorInputTextHint"
+            android:textSize="16sp"
+            android:inputType="textPersonName"
+            android:autofillHints="family-name" />
+    </com.google.android.material.card.MaterialCardView>
+
+    <!-- Cell Phone Title -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="4dp"
+        android:text="@string/hint_cell_phone"
+        android:textColor="?attr/colorPrimaryText"
+        android:textSize="16sp" />
+
+    <!-- Cell Phone -->
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        app:cardElevation="4dp"
+        app:cardCornerRadius="8dp"
+        app:cardUseCompatPadding="true"
+        app:strokeWidth="1dp"
+        app:strokeColor="?attr/colorCardStroke">
+
+        <EditText
+            android:id="@+id/ec_cell"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:hint="@string/hint_cell_phone"
+            android:padding="12dp"
+            android:background="?attr/colorInputBackground"
+            android:textColor="?attr/colorInputText"
+            android:textColorHint="?attr/colorInputTextHint"
+            android:textSize="16sp"
+            android:inputType="phone"
+            android:autofillHints="tel" />
+    </com.google.android.material.card.MaterialCardView>
+
+    <!-- Email Title -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="4dp"
+        android:text="@string/hint_email"
+        android:textColor="?attr/colorPrimaryText"
+        android:textSize="16sp" />
+
+    <!-- Email -->
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        app:cardElevation="4dp"
+        app:cardCornerRadius="8dp"
+        app:cardUseCompatPadding="true"
+        app:strokeWidth="1dp"
+        app:strokeColor="?attr/colorCardStroke">
+
+        <EditText
+            android:id="@+id/ec_email"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:hint="@string/hint_email"
+            android:padding="12dp"
+            android:background="?attr/colorInputBackground"
+            android:textColor="?attr/colorInputText"
+            android:textColorHint="?attr/colorInputTextHint"
+            android:textSize="16sp"
+            android:inputType="textEmailAddress"
+            android:autofillHints="emailAddress" />
+    </com.google.android.material.card.MaterialCardView>
+
+</LinearLayout>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="?attr/colorSurface">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="79dp"
+        android:gravity="start"
+        android:orientation="horizontal"
+        android:paddingTop="@dimen/spacingMain">
+
+        <ImageView
+            android:id="@+id/imageViewHome"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:layout_weight=".25"
+            android:background="?attr/colorPrimary"
+            android:padding="10dp"
+            app:srcCompat="@drawable/home"
+            app:tint="?attr/colorOnPrimary" />
+
+        <ImageView
+            android:id="@+id/imageViewPets"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:layout_weight=".25"
+            android:layout_toRightOf="@id/imageViewHome"
+            android:padding="10dp"
+            app:srcCompat="@drawable/pets"
+            app:tint="?attr/colorOnSurface" />
+
+        <ImageView
+            android:id="@+id/imageViewNotifications"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:layout_weight=".25"
+            android:layout_toRightOf="@id/imageViewPets"
+            android:padding="10dp"
+            app:srcCompat="@drawable/notifications"
+            app:tint="?attr/colorOnSurface" />
+
+        <ImageView
+            android:id="@+id/imageViewSettings"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:layout_weight=".25"
+            android:layout_toRightOf="@id/imageViewNotifications"
+            android:padding="10dp"
+            app:srcCompat="@drawable/settings"
+            app:tint="?attr/colorOnSurface" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="4dp"
+        android:background="?attr/colorPrimary" />
+
+</LinearLayout>

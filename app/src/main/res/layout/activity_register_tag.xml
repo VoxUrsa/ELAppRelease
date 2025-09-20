@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/colorTabHeaderBackground">
+
+    <!-- Tab-like view -->
+    <View
+        android:id="@+id/tabView"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="2dp"
+        android:background="@drawable/tab_background"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_percent="0.65" />
+
+    <!-- Main Content Container -->
+    <LinearLayout
+        android:id="@+id/contentContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="30dp"
+        android:orientation="vertical"
+        android:paddingLeft="16dp"
+        android:paddingTop="16dp"
+        android:paddingRight="16dp"
+        android:background="@drawable/curved_top_background"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tabView">
+
+        <!-- Title and Chevron Row -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingBottom="16dp">
+
+            <TextView
+                android:id="@+id/registerTagTitle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Register Your Pet"
+                android:textColor="?attr/colorPrimaryText"
+                android:textSize="26sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/chevronLeft"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:contentDescription="Chevron Left"
+                android:src="@drawable/ic_chevron_left"
+                app:tint="?attr/colorChevron" />
+
+        </LinearLayout>
+
+        <!-- Horizontal Rule -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="?attr/colorChevron"
+            android:layout_marginBottom="16dp" />
+
+        <!-- ScrollView for form fields -->
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:fillViewport="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <!-- Tag ID (Required) -->
+                <EditText
+                    android:id="@+id/pet_tag_ID"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Tag ID *"
+                    android:padding="16dp"
+                    android:background="@drawable/edit_text_background"
+                    android:layout_marginTop="16dp" />
+
+                <!-- Activation Code (Required) -->
+                <EditText
+                    android:id="@+id/pet_activation_code"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Activation Code *"
+                    android:padding="16dp"
+                    android:background="@drawable/edit_text_background"
+                    android:layout_marginTop="16dp" />
+
+                <!-- Pet Name (Required) -->
+                <EditText
+                    android:id="@+id/pet_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Pet Name *"
+                    android:padding="16dp"
+                    android:background="@drawable/edit_text_background"
+                    android:layout_marginTop="16dp" />
+
+                <!-- Pet Type (Required) -->
+                <Spinner
+                    android:id="@+id/pet_type"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:padding="16dp"
+                    android:background="@drawable/edit_text_background"
+                    android:spinnerMode="dropdown" />
+
+                <!-- Pet Breed (Required) -->
+                <EditText
+                    android:id="@+id/pet_breed"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Pet Breed *"
+                    android:padding="16dp"
+                    android:background="@drawable/edit_text_background"
+                    android:layout_marginTop="16dp" />
+
+                <!-- Pet Gender (Required) -->
+                <Spinner
+                    android:id="@+id/pet_gender"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:padding="16dp"
+                    android:background="@drawable/edit_text_background"
+                    android:spinnerMode="dropdown" />
+
+                <!-- Pet Birthday (Required) -->
+                <TextView
+                    android:id="@+id/pet_birthday_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Pet Birthday *"
+                    android:textSize="16sp"
+                    android:layout_marginTop="16dp"
+                    android:textColor="?attr/colorPrimaryText" />
+
+                <DatePicker
+                    android:id="@+id/pet_birthday"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp" />
+
+                <!-- Microchip ID -->
+                <EditText
+                    android:id="@+id/pet_microchip"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Microchip ID"
+                    android:padding="16dp"
+                    android:background="@drawable/edit_text_background"
+                    android:layout_marginTop="16dp" />
+
+                <!-- Tattoo ID -->
+                <EditText
+                    android:id="@+id/pet_tat"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Tattoo ID"
+                    android:padding="16dp"
+                    android:background="@drawable/edit_text_background"
+                    android:layout_marginTop="16dp" />
+
+                <!-- Neutered/Spayed -->
+                <Spinner
+                    android:id="@+id/pet_neutspay"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:padding="16dp"
+                    android:background="@drawable/edit_text_background"
+                    android:spinnerMode="dropdown" />
+
+                <!-- Pet Notes -->
+                <EditText
+                    android:id="@+id/pet_notes"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Pet Notes"
+                    android:padding="16dp"
+                    android:background="@drawable/edit_text_background"
+                    android:layout_marginTop="16dp"
+                    android:inputType="textMultiLine"
+                    android:minLines="3" />
+
+                <!-- Photo Upload -->
+                <Button
+                    android:id="@+id/uploadPhotoButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Upload Pet Photo *"
+                    android:padding="16dp"
+                    android:layout_marginTop="16dp" />
+
+                <ImageView
+                    android:id="@+id/petPhotoThumbnail"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_gravity="center"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/ic_pet_placeholder" />
+            </LinearLayout>
+        </ScrollView>
+
+        <!-- Button Container at the Bottom -->
+        <LinearLayout
+            android:id="@+id/buttonContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="16dp"
+            android:gravity="center">
+
+            <Button
+                android:id="@+id/cancelButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Cancel"
+                android:textSize="18sp"
+                android:backgroundTint="@color/red"
+                android:textColor="@android:color/white" />
+
+            <View
+                android:layout_width="16dp"
+                android:layout_height="match_parent" />
+
+            <Button
+                android:id="@+id/saveButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Save"
+                android:textSize="18sp"
+                android:textColor="@android:color/white" />
+        </LinearLayout>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

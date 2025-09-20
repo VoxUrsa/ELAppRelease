@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This is our main layout container. -->
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/colorTabHeaderBackground">
+
+    <!-- This is where we create the tab-like view at the top. -->
+    <View
+        android:id="@+id/tabView"
+        android:layout_width="0dp"
+        android:layout_height="25dp"
+        android:background="@drawable/tab_background"
+        app:layout_constraintWidth_percent="0.65"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="2dp" />
+
+    <!-- This is where we set up the static container with a curved top background. -->
+    <LinearLayout
+        android:id="@+id/staticContainer"
+        android:layout_width="406dp"
+        android:layout_height="53dp"
+        android:background="@drawable/curved_top_background"
+        android:orientation="vertical"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tabView">
+
+        <!-- This is where we create the title and chevron row. -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/registerPetTitle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/notification_settings"
+                android:textColor="?attr/colorPrimaryText"
+                android:textSize="26sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/chevronLeft"
+                android:layout_width="@dimen/spacingList"
+                android:layout_height="@dimen/spacingList"
+                android:contentDescription="@string/chevron_left"
+                android:src="@drawable/ic_chevron_left"
+                app:tint="?attr/colorChevron" />
+        </LinearLayout>
+
+        <!-- This is where we add a horizontal rule. -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="?attr/colorChevron" />
+    </LinearLayout>
+
+    <!-- This is where we set up the scrollable content container. -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="?attr/colorTabBackground"
+        app:layout_constraintTop_toBottomOf="@id/staticContainer"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <LinearLayout
+            android:id="@+id/container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingTop="16dp"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:paddingBottom="70dp">
+
+            <!-- This is where we add the Push Notification switch. -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:paddingBottom="16dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/push_notifications"
+                    android:textSize="18sp"
+                    android:textColor="?attr/colorPrimaryText" />
+
+                <androidx.appcompat.widget.SwitchCompat
+                    android:id="@+id/switchPushNotifications"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <!-- This is where we add the Email Notification switch wrapped in a FrameLayout. -->
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/emailFrame">
+
+                <!-- This is where we create the Email notification row. -->
+                <LinearLayout
+                    android:id="@+id/emailContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:paddingBottom="16dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/email_notifications"
+                        android:textSize="18sp"
+                        android:textColor="?attr/colorPrimaryText" />
+
+                    <androidx.appcompat.widget.SwitchCompat
+                        android:id="@+id/switchEmailNotifications"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+                <!-- This is where we add an overlay to indicate the feature is locked. -->
+                <TextView
+                    android:id="@+id/emailOverlay"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="@string/subscription_locked"
+                    android:textColor="#FF0000"
+                    android:background="#80FFFFFF"
+                    android:visibility="gone" />
+            </FrameLayout>
+
+            <!-- This is where we add the SMS Notification switch wrapped in a FrameLayout. -->
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/smsFrame">
+
+                <!-- This is where we create the SMS notification row. -->
+                <LinearLayout
+                    android:id="@+id/smsContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:paddingBottom="16dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/sms_notifications"
+                        android:textSize="18sp"
+                        android:textColor="?attr/colorPrimaryText" />
+
+                    <androidx.appcompat.widget.SwitchCompat
+                        android:id="@+id/switchSMSNotifications"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+                <!-- This is where we add an overlay to indicate the feature is locked. -->
+                <TextView
+                    android:id="@+id/smsOverlay"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="@string/subscription_locked"
+                    android:textColor="#FF0000"
+                    android:background="#80FFFFFF"
+                    android:visibility="gone" />
+            </FrameLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <!-- This is where we add the Cancel and Save buttons. -->
+    <LinearLayout
+        android:id="@+id/buttonContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/spacingMain"
+        android:background="?attr/colorTabBackground"
+        android:gravity="start"
+        android:orientation="horizontal"
+        android:padding="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <Button
+            android:id="@+id/cancelButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:backgroundTint="@color/red"
+            android:textSize="24sp"
+            android:text="@string/cancel"
+            android:textColor="@color/white" />
+
+        <View
+            android:layout_width="40dp"
+            android:layout_height="match_parent" />
+
+        <Button
+            android:id="@+id/saveButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_weight="1"
+            android:backgroundTint="?attr/colorButtonBackground"
+            android:text="@string/save"
+            android:textSize="24sp" />
+    </LinearLayout>
+
+    <!-- This is where we add a dim overlay for a blur effect when loading. -->
+    <View
+        android:id="@+id/dimOverlay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#80000000"
+        android:clickable="true"
+        android:focusable="true"
+        android:visibility="gone" />
+
+    <!-- This is where we add a ProgressBar for loading indications. -->
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

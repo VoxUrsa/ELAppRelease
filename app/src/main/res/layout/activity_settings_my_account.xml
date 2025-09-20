@@ -1,0 +1,470 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/colorTabHeaderBackground">
+
+    <!-- Tab-like view -->
+    <View
+        android:id="@+id/tabView"
+        android:layout_width="0dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="2dp"
+        android:background="@drawable/tab_background"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_percent="0.65" />
+
+    <!-- Background with curved top corners -->
+    <LinearLayout
+        android:id="@+id/staticContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/curved_top_background"
+        android:orientation="vertical"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tabView">
+
+        <!-- Title and Chevron Row -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/registerPetTitle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/my_account"
+                android:textColor="?attr/colorPrimaryText"
+                android:textSize="26sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/chevronLeft"
+                android:layout_width="@dimen/spacingList"
+                android:layout_height="@dimen/spacingList"
+                android:contentDescription="@string/chevron_left"
+                android:src="@drawable/ic_chevron_left"
+                app:tint="?attr/colorChevron" />
+
+        </LinearLayout>
+
+        <!-- Horizontal Rule -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="?attr/colorChevron" />
+
+    </LinearLayout>
+
+    <!-- Scrollable content -->
+    <ScrollView
+        android:id="@+id/scrollViewContainer"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="?attr/colorTabBackground"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/staticContainer">
+
+        <LinearLayout
+            android:id="@+id/container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="16dp"
+            android:paddingTop="16dp"
+            android:paddingRight="16dp"
+            android:paddingBottom="70dp">
+
+            <!-- First Name -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/hint_first_name"
+                android:textColor="?attr/colorPrimaryText"
+                android:textSize="16sp" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:layout_weight="2"
+                    app:cardCornerRadius="8dp"
+                    app:cardElevation="4dp"
+                    app:cardUseCompatPadding="true"
+                    app:strokeColor="?attr/colorCardStroke"
+                    app:strokeWidth="1dp">
+
+                    <EditText
+                        android:id="@+id/firstName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:autofillHints="autofill_firstName"
+                        android:background="?attr/colorInputBackground"
+                        android:hint="@string/hint_first_name"
+                        android:inputType="textPersonName"
+                        android:padding="12dp"
+                        android:textColor="?attr/colorInputText"
+                        android:textColorHint="?attr/colorInputTextHint"
+                        android:textSize="16sp" />
+                </com.google.android.material.card.MaterialCardView>
+            </LinearLayout>
+
+            <!-- Last Name -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/hint_last_name"
+                android:textColor="?attr/colorPrimaryText"
+                android:textSize="16sp" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:layout_weight="2"
+                    app:cardCornerRadius="8dp"
+                    app:cardElevation="4dp"
+                    app:cardUseCompatPadding="true"
+                    app:strokeColor="?attr/colorCardStroke"
+                    app:strokeWidth="1dp">
+
+                    <EditText
+                        android:id="@+id/lastName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:autofillHints="autofill_lastName"
+                        android:background="?attr/colorInputBackground"
+                        android:hint="@string/hint_last_name"
+                        android:inputType="textPersonName"
+                        android:minHeight="48dp"
+                        android:padding="12dp"
+                        android:textColor="?attr/colorInputText"
+                        android:textColorHint="?attr/colorInputTextHint"
+                        android:textSize="16sp" />
+                </com.google.android.material.card.MaterialCardView>
+            </LinearLayout>
+
+            <!-- Address Line 1 -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/hint_address1"
+                android:textColor="?attr/colorPrimaryText"
+                android:textSize="16sp" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:layout_weight="2"
+                    app:cardCornerRadius="8dp"
+                    app:cardElevation="4dp"
+                    app:cardUseCompatPadding="true"
+                    app:strokeColor="?attr/colorCardStroke"
+                    app:strokeWidth="1dp">
+
+                    <EditText
+                        android:id="@+id/el_pro_address1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:autofillHints="autofill_addressLine1"
+                        android:background="?attr/colorInputBackground"
+                        android:hint="@string/hint_address1"
+                        android:inputType="textPostalAddress"
+                        android:minHeight="48dp"
+                        android:padding="12dp"
+                        android:textColor="?attr/colorInputText"
+                        android:textColorHint="?attr/colorInputTextHint"
+                        android:textSize="16sp" />
+                </com.google.android.material.card.MaterialCardView>
+            </LinearLayout>
+
+            <!-- Address Line 2 -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/hint_address2"
+                android:textColor="?attr/colorPrimaryText"
+                android:textSize="16sp" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:layout_weight="2"
+                    app:cardCornerRadius="8dp"
+                    app:cardElevation="4dp"
+                    app:cardUseCompatPadding="true"
+                    app:strokeColor="?attr/colorCardStroke"
+                    app:strokeWidth="1dp">
+
+                    <EditText
+                        android:id="@+id/el_pro_address2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:autofillHints="autofill_addressLine2"
+                        android:background="?attr/colorInputBackground"
+                        android:hint="@string/hint_address2"
+                        android:inputType="textPostalAddress"
+                        android:minHeight="48dp"
+                        android:padding="12dp"
+                        android:textColor="?attr/colorInputText"
+                        android:textColorHint="?attr/colorInputTextHint"
+                        android:textSize="16sp" />
+                </com.google.android.material.card.MaterialCardView>
+            </LinearLayout>
+
+            <!-- City -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/hint_city"
+                android:textColor="?attr/colorPrimaryText"
+                android:textSize="16sp" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:layout_weight="2"
+                    app:cardCornerRadius="8dp"
+                    app:cardElevation="4dp"
+                    app:cardUseCompatPadding="true"
+                    app:strokeColor="?attr/colorCardStroke"
+                    app:strokeWidth="1dp">
+
+                    <EditText
+                        android:id="@+id/el_pro_city"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:autofillHints="autofill_addressLocality"
+                        android:background="?attr/colorInputBackground"
+                        android:hint="@string/hint_city"
+                        android:inputType="textPostalAddress"
+                        android:minHeight="48dp"
+                        android:padding="12dp"
+                        android:textColor="?attr/colorInputText"
+                        android:textColorHint="?attr/colorInputTextHint"
+                        android:textSize="16sp" />
+                </com.google.android.material.card.MaterialCardView>
+            </LinearLayout>
+
+            <!-- State -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/hint_state"
+                android:textColor="?attr/colorPrimaryText"
+                android:textSize="16sp" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:layout_weight="2"
+                    app:cardCornerRadius="8dp"
+                    app:cardElevation="4dp"
+                    app:cardUseCompatPadding="true"
+                    app:strokeColor="?attr/colorCardStroke"
+                    app:strokeWidth="1dp">
+
+                    <EditText
+                        android:id="@+id/el_pro_state"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:autofillHints="autofill_addressRegion"
+                        android:background="?attr/colorInputBackground"
+                        android:hint="@string/hint_state"
+                        android:inputType="textPostalAddress"
+                        android:minHeight="48dp"
+                        android:padding="12dp"
+                        android:textColor="?attr/colorInputText"
+                        android:textColorHint="?attr/colorInputTextHint"
+                        android:textSize="16sp" />
+                </com.google.android.material.card.MaterialCardView>
+            </LinearLayout>
+
+            <!-- Zip -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/hint_zip"
+                android:textColor="?attr/colorPrimaryText"
+                android:textSize="16sp" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:layout_weight="2"
+                    app:cardCornerRadius="8dp"
+                    app:cardElevation="4dp"
+                    app:cardUseCompatPadding="true"
+                    app:strokeColor="?attr/colorCardStroke"
+                    app:strokeWidth="1dp">
+
+                    <EditText
+                        android:id="@+id/el_pro_zip"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:autofillHints="autofill_postalCode"
+                        android:background="?attr/colorInputBackground"
+                        android:hint="@string/hint_zip"
+                        android:inputType="number"
+                        android:minHeight="48dp"
+                        android:padding="12dp"
+                        android:textColor="?attr/colorInputText"
+                        android:textColorHint="?attr/colorInputTextHint"
+                        android:textSize="16sp" />
+                </com.google.android.material.card.MaterialCardView>
+            </LinearLayout>
+
+            <!-- Primary Cell -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/hint_primary_cell"
+                android:textColor="?attr/colorPrimaryText"
+                android:textSize="16sp" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:layout_weight="2"
+                    app:cardCornerRadius="8dp"
+                    app:cardElevation="4dp"
+                    app:cardUseCompatPadding="true"
+                    app:strokeColor="?attr/colorCardStroke"
+                    app:strokeWidth="1dp">
+
+                    <EditText
+                        android:id="@+id/el_pro_cell"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:autofillHints="autofill_phoneNumber"
+                        android:background="?attr/colorInputBackground"
+                        android:hint="@string/hint_primary_cell"
+                        android:inputType="phone"
+                        android:minHeight="48dp"
+                        android:padding="12dp"
+                        android:textColor="?attr/colorInputText"
+                        android:textColorHint="?attr/colorInputTextHint"
+                        android:textSize="16sp" />
+                </com.google.android.material.card.MaterialCardView>
+            </LinearLayout>
+
+            <!-- Additional Owner Contacts Placeholder -->
+            <LinearLayout
+                android:id="@+id/additionalContactsContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <!-- Dynamically add fields here based on subscription level -->
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <!-- Progress Bar for Loading Indicator -->
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" /> <!-- Initially hidden -->
+
+    <!-- Cancel and Save Button -->
+    <LinearLayout
+        android:id="@+id/buttonContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/spacingMain"
+        android:background="?attr/colorTabBackground"
+        android:gravity="start"
+        android:orientation="horizontal"
+        android:padding="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <Button
+            android:id="@+id/cancelButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:backgroundTint="@color/red"
+            android:text="@string/cancel"
+            android:textColor="@color/white"
+            android:textSize="24sp" />
+
+        <View
+            android:layout_width="40dp"
+            android:layout_height="match_parent" />
+
+        <Button
+            android:id="@+id/saveButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_weight="1"
+
+            android:backgroundTint="?attr/colorButtonBackground"
+            android:text="@string/save"
+            android:textSize="24sp" />
+
+    </LinearLayout>
+    <View
+        android:id="@+id/dimOverlay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#80000000"
+        android:clickable="true"
+        android:focusable="true"
+        android:visibility="gone" />
+</androidx.constraintlayout.widget.ConstraintLayout>

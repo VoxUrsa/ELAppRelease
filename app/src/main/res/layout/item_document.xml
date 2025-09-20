@@ -1,0 +1,20 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="8dp">
+
+    <ImageView
+        android:id="@+id/documentIcon"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/ic_document" />
+
+    <TextView
+        android:id="@+id/documentName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Document Name"
+        android:layout_marginStart="16dp"
+        android:layout_gravity="center_vertical"/>
+</LinearLayout>

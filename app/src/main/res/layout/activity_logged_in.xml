@@ -1,0 +1,449 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/colorTabBackground">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center|top"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Updated to FragmentContainerView -->
+        <androidx.fragment.app.FragmentContainerView
+            android:id="@+id/headerFragment"
+            android:name="com.emergencyleash.app.HeaderFragment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <!-- Updated to FragmentContainerView -->
+        <androidx.fragment.app.FragmentContainerView
+            android:id="@+id/navigationFragmentContainer"
+            android:name="com.emergencyleash.app.NavigationFragment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <!-- User Info Section -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacingMain"
+            android:background="?attr/colorCardBackground"
+            android:gravity="start"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <!-- Date and Edit Section -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                android:orientation="horizontal">
+
+                <!-- Clock Icon -->
+                <ImageView
+                    android:id="@+id/imageViewClock"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:gravity="start"
+                    app:srcCompat="@drawable/clock"
+                    app:tint="?attr/colorPrimary"
+                    android:contentDescription="@string/desc_clock_icon" />
+
+                <!-- Today's Date -->
+                <TextView
+                    android:id="@+id/todayText"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:paddingStart="8dp"
+                    android:paddingEnd="8dp"
+                    android:paddingTop="3dp"
+                    android:text="@string/todayText"
+                    android:textColor="?attr/colorPrimary"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <!-- Edit Profile Layout -->
+                <LinearLayout
+                    android:id="@+id/editProfileLayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:background="?attr/selectableItemBackground">
+
+                    <!-- Edit Icon -->
+                    <ImageView
+                        android:id="@+id/imageViewEdit"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        app:srcCompat="@drawable/edit"
+                        app:tint="?attr/colorOnSurface"
+                        android:contentDescription="@string/desc_edit_icon" />
+
+                    <!-- Edit Text -->
+                    <TextView
+                        android:id="@+id/editText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingStart="4dp"
+                        android:paddingEnd="4dp"
+                        android:text="@string/edit"
+                        android:textColor="?attr/colorOnSurface"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Name Section -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                android:orientation="horizontal"
+                android:paddingTop="@dimen/spacingMain">
+
+                <TextView
+                    android:id="@+id/first_nameT"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/first_name"
+                    android:textSize="28sp"
+                    android:textStyle="bold"
+                    android:textColor="?attr/colorPrimaryDark" />
+
+                <TextView
+                    android:id="@+id/last_nameT"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:text="@string/last_name"
+                    android:textSize="28sp"
+                    android:textStyle="bold"
+                    android:textColor="?attr/colorPrimaryDark" />
+            </LinearLayout>
+
+            <!-- Member Since -->
+            <TextView
+                android:id="@+id/member_sinceT"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:text="@string/member_since"
+                android:textColor="?attr/colorSecondary"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+            <!-- Subscription Name -->
+            <TextView
+                android:id="@+id/subscriptionNameT"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:text="@string/subscription_name"
+                android:textColor="?attr/colorSecondary"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+            <!-- Address Section -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                android:orientation="horizontal">
+
+                <!-- Location Icon -->
+                <ImageView
+                    android:id="@+id/imageViewMyLocation"
+                    android:layout_width="64dp"
+                    android:layout_height="64dp"
+                    android:layout_marginTop="10dp"
+                    android:gravity="start"
+                    app:srcCompat="@drawable/mylocation"
+                    app:tint="?attr/colorPrimary"
+                    android:contentDescription="@string/desc_location_icon" />
+
+                <!-- Address Details -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="start"
+                    android:orientation="vertical"
+                    android:paddingTop="5dp">
+
+                    <!-- Address Line 1 & 2 -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="start"
+                        android:orientation="horizontal"
+                        android:paddingTop="5dp">
+
+                        <TextView
+                            android:id="@+id/address1T"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:text="@string/address1"
+                            android:textColor="?attr/colorSecondary"
+                            android:textSize="20sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/address2T"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="5dp"
+                            android:text="@string/address2"
+                            android:textColor="?attr/colorSecondary"
+                            android:textSize="20sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <!-- City, State, Zip -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="start"
+                        android:orientation="horizontal"
+                        android:paddingTop="2dp">
+
+                        <TextView
+                            android:id="@+id/cityT"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:text="@string/city"
+                            android:textColor="?attr/colorSecondary"
+                            android:textSize="20sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/stateT"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="5dp"
+                            android:text="@string/state"
+                            android:textColor="?attr/colorSecondary"
+                            android:textSize="20sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/zipT"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="5dp"
+                            android:text="@string/zip"
+                            android:textColor="?attr/colorSecondary"
+                            android:textSize="20sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Notifications Permissions Section -->
+
+        <LinearLayout
+            android:id="@+id/addPermissionsSection"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacingMain"
+            android:background="?attr/colorCardBackgroundGray"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="10dp">
+
+                <!-- Person Add Icon -->
+                <ImageView
+                    android:id="@+id/imageNotificationsPermissions"
+                    android:layout_width="64dp"
+                    android:layout_height="64dp"
+                    android:contentDescription="@string/desc_person_add_icon"
+                    android:gravity="start"
+                    app:srcCompat="@drawable/app_registration"
+                    app:tint="?attr/colorIconMyAccount" />
+
+                <!-- Add Contacts Text -->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/addNotificationsPermissionsText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:text="@string/add_notifications_permissions"
+                        android:textColor="?attr/colorIconMyAccount"
+                        android:textSize="22sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/addNotificationsPermissionsSubText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/add_notifications_permissions_subtext"
+                        android:textColor="?attr/colorIconMyAccount"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/addContactsSection"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacingMain"
+            android:background="?attr/colorSurface"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="10dp"
+            android:clickable="true"
+            android:focusable="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="10dp">
+
+                <!-- Person Add Icon -->
+                <ImageView
+                    android:id="@+id/imageViewPersonAdd"
+                    android:layout_width="64dp"
+                    android:layout_height="64dp"
+                    android:gravity="start"
+                    app:srcCompat="@drawable/person_add"
+                    app:tint="?attr/colorPrimary"
+                    android:contentDescription="@string/desc_person_add_icon" />
+
+                <!-- Add Contacts Text -->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/addMoreContactsText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:text="@string/add_more_contacts"
+                        android:textColor="?attr/colorSecondary"
+                        android:textSize="22sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/addMoreContactsSubText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/ensure_pets_safety"
+                        android:textColor="?attr/colorSecondary"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Banner ViewPager -->
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/bannerViewPager"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacingMain" />
+
+        <!-- My Pets Section -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="start"
+            android:orientation="vertical"
+            android:paddingTop="@dimen/spacingMain">
+
+            <TextView
+                android:id="@+id/myPetsText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacingMain"
+                android:elevation="20dp"
+                android:text="@string/my_pets"
+                android:textColor="?attr/colorOnSurface"
+                android:textSize="22sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/btNewPet"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/registernewpet"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacingMain"
+                android:gravity="start"
+                android:orientation="vertical">
+
+                <!-- Progress Bar -->
+                <ProgressBar
+                    android:id="@+id/myPetsProgressBar"
+                    style="?android:attr/progressBarStyleLarge"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:visibility="gone" />
+
+                <!-- Empty Pets Text -->
+                <TextView
+                    android:id="@+id/emptyPetsText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/no_pets_found"
+                    android:textAlignment="center"
+                    android:textSize="16sp"
+                    android:textColor="?attr/colorOnSurface"
+                    android:visibility="gone"
+                    android:layout_marginTop="16dp" />
+
+                <!-- Pets RecyclerView -->
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/my_pets_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:nestedScrollingEnabled="false" />
+            </LinearLayout>
+        </LinearLayout>
+        <TextView
+            android:id="@+id/appVersionText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end|bottom"
+            android:layout_margin="16dp"
+            android:text="@string/versionNumberUpdate"
+            android:textSize="14sp"
+            android:textColor="?attr/colorSecondary"
+            android:textStyle="bold" />
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

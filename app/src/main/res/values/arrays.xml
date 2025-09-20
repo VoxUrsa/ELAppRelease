@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="pet_types">
+        <item>Cat</item>
+        <item>Dog</item>
+        <item>Horse</item>
+        <item>Other</item>
+    </string-array>
+
+    <string-array name="pet_genders">
+        <item>Male</item>
+        <item>Female</item>
+        <item>Unknown</item>
+    </string-array>
+
+    <string-array name="neutered_spayed">
+        <item>Yes</item>
+        <item>No</item>
+        <item>Unknown</item>
+    </string-array>
+
+    <string-array name="state_list">
+        <item>Alabama - AL</item>
+        <item>Alaska - AK</item>
+        <item>Arizona - AZ</item>
+        <item>Arkansas - AR</item>
+        <item>California - CA</item>
+        <item>Colorado - CO</item>
+        <item>Connecticut - CT</item>
+        <item>Delaware - DE</item>
+        <item>District of Columbia - DC</item>
+        <item>Florida - FL</item>
+        <item>Georgia - GA</item>
+        <item>Hawaii - HI</item>
+        <item>Idaho - ID</item>
+        <item>Illinois - IL</item>
+        <item>Indiana - IN</item>
+        <item>Iowa - IA</item>
+        <item>Kansas - KS</item>
+        <item>Kentucky - KY</item>
+        <item>Louisiana - LA</item>
+        <item>Maine - ME</item>
+        <item>Maryland - MD</item>
+        <item>Massachusetts - MA</item>
+        <item>Michigan - MI</item>
+        <item>Minnesota - MN</item>
+        <item>Mississippi - MS</item>
+        <item>Missouri - MO</item>
+        <item>Montana - MT</item>
+        <item>Nebraska - NE</item>
+        <item>Nevada - NV</item>
+        <item>New Hampshire - NH</item>
+        <item>New Jersey - NJ</item>
+        <item>New Mexico - NM</item>
+        <item>New York - NY</item>
+        <item>North Carolina - NC</item>
+        <item>North Dakota - ND</item>
+        <item>Ohio - OH</item>
+        <item>Oklahoma - OK</item>
+        <item>Oregon - OR</item>
+        <item>Pennsylvania - PA</item>
+        <item>Rhode Island - RI</item>
+        <item>South Carolina - SC</item>
+        <item>South Dakota - SD</item>
+        <item>Tennessee - TN</item>
+        <item>Texas - TX</item>
+        <item>Utah - UT</item>
+        <item>Vermont - VT</item>
+        <item>Virginia - VA</item>
+        <item>Washington - WA</item>
+        <item>West Virginia - WV</item>
+        <item>Wisconsin - WI</item>
+        <item>Wyoming - WY</item>
+    </string-array>
+
+</resources>

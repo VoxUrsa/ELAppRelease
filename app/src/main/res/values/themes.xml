@@ -1,0 +1,53 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base Light Theme -->
+    <style name="Base.Theme.AccessApp" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorBackground">@color/background</item>
+        <item name="colorButtonBackground">@color/buttonBackground</item>
+        <item name="colorButtonText">@color/buttonText</item>
+        <item name="colorPrimary">@color/primaryMed</item>
+        <item name="colorChevron">@color/primaryMed</item>
+        <item name="colorSecondary">@color/secondary_text</item>
+        <item name="colorSurface">@color/primaryLight</item>
+        <item name="colorOnSurface">@color/primaryDark</item>
+        <item name="colorPrimaryText">@color/primaryDark</item>
+        <item name="colorHintText">@color/secondary_text</item>
+        <item name="colorAccent">@color/red</item>
+        <item name="colorTabHeaderBackground">@color/tabHeaderBackground</item>
+        <item name="colorTabBackground">@color/tabBackground</item>
+        <item name="colorPrimaryTextHint">@color/primaryTextHint</item>
+        <item name="colorPrimaryTextBackground">@color/primaryTextBackground</item>
+        <item name="colorInputText">@color/inputText</item>
+        <item name="colorInputTextHint">@color/inputTextHint</item>
+        <item name="colorInputBackground">@color/inputBackground</item>
+        <item name="colorCardStroke">@color/dark_cardStroke</item>
+
+        <item name="colorIconRegisterPet">@color/colorIconRegisterPet</item>
+        <item name="colorIconPetsRegistered">@color/colorIconPetsRegistered</item>
+        <item name="colorIconTags">@color/colorIconTags</item>
+        <item name="colorIconTagReplacement">@color/colorIconTagReplacement</item>
+        <item name="colorIconSubscriptions">@color/colorIconSubscriptions</item>
+        <item name="colorIconMyAccount">@color/colorIconMyAccount</item>
+        <item name="colorIconMyContacts">@color/colorIconMyContacts</item>
+        <item name="colorIconMyAdmins">@color/colorIconMyAdmins</item>
+        <item name="colorIconMyAddresses">@color/colorIconMyAddresses</item>
+        <item name="colorIconNotifications">@color/colorIconNotifications</item>
+        <item name="colorIconAccessibility">@color/colorIconAccessibility</item>
+        <item name="colorIconMeasurements">@color/colorIconMeasurements</item>
+        <item name="colorIconReportLostPet">@color/colorIconReportLostPet</item>
+        <item name="colorIconPrivacyPolicy">@color/colorIconPrivacyPolicy</item>
+        <item name="colorIconTermsOfUse">@color/colorIconTermsOfUse</item>
+        <item name="colorIconSendFeedback">@color/colorIconSendFeedback</item>
+        <item name="colorIconFAQ">@color/colorIconFAQ</item>
+        <item name="colorCardBackground">@color/cardBackground</item>
+        <item name="colorCardBackgroundYellow">@color/cardBackgroundYellow</item>
+        <item name="colorCardBackgroundGray">@color/cardBackgroundGray</item>
+
+
+
+
+        <item name="logoDrawable">@drawable/ellogoblacknobg</item>
+
+    </style>
+    <!-- Default Theme -->
+    <style name="Theme.AccessApp" parent="Base.Theme.AccessApp" />
+</resources>

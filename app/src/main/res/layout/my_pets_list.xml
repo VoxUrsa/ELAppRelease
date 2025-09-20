@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/petCard"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="4dp"
+    app:cardUseCompatPadding="true"
+    app:strokeColor="?attr/colorCardStroke"
+    app:strokeWidth="2dp"
+    android:background="?attr/colorCardBackground"
+    tools:ignore="MissingPrefix">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp"
+        android:background="?attr/colorCardBackground">
+
+        <!-- =====================
+             1) Header row
+        ===================== -->
+        <LinearLayout
+            android:id="@+id/linearLayout_header"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="1"
+            android:background="?attr/colorCardBackground"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent">
+
+            <!-- Pet Name (weight=1 so the edit icon/text float right) -->
+            <TextView
+                android:id="@+id/pet_name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="5dp"
+                android:contentDescription="@string/cd_pet_name"
+                android:paddingTop="3dp"
+                android:text="@string/pet_name"
+                android:textColor="?attr/colorPrimaryDark"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <!-- Edit Icon -->
+            <ImageView
+                android:id="@+id/imageViewEdit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:contentDescription="@string/cd_edit_button"
+                app:srcCompat="@drawable/edit"
+                app:tint="?attr/colorPrimaryDark" />
+
+            <!-- "Edit" Text -->
+            <TextView
+                android:id="@+id/editText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginEnd="12dp"
+                android:gravity="end"
+                android:contentDescription="@string/cd_edit_text"
+                android:text="@string/edit"
+                android:textColor="?attr/colorPrimaryDark"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:paddingTop="3dp" />
+        </LinearLayout>
+
+        <!-- =====================
+             2) Flow container
+        ===================== -->
+        <androidx.constraintlayout.helper.widget.Flow
+            android:id="@+id/flow_main"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:flow_wrapMode="chain"
+            app:flow_horizontalGap="8dp"
+            app:flow_verticalGap="8dp"
+            app:flow_maxElementsWrap="2"
+            app:constraint_referenced_ids="petPhotoCard,pet_info_card"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout_header"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <!-- =====================
+             3) Pet Photo Card
+        ===================== -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/petPhotoCard"
+            android:layout_width="108dp"
+            android:layout_height="108dp"
+            android:layout_marginTop="@dimen/spacingMain"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="4dp"
+            app:cardUseCompatPadding="true"
+            tools:ignore="MissingConstraints">
+
+            <ImageView
+                android:id="@+id/pet_photo"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:contentDescription="@string/cd_pet_photo"
+                android:src="@drawable/ic_launcher_background" />
+        </androidx.cardview.widget.CardView>
+
+        <!-- =====================
+             4) Info Card
+        ===================== -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/pet_info_card"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginTop="@dimen/spacingMain"
+            app:cardCornerRadius="8dp"
+            app:strokeColor="?attr/colorCardStroke"
+            app:strokeWidth="2dp"
+            app:cardElevation="0dp"
+            android:background="?attr/colorSurface"
+            tools:ignore="MissingConstraints">
+
+            <!-- Info Layout -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:background="?attr/colorSurface"
+                android:padding="10sp">
+
+                <!-- ========== Pet Details Section ========== -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="start"
+                    android:orientation="horizontal">
+
+                    <!-- Pet Icon -->
+                    <ImageView
+                        android:id="@+id/imageViewPet"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:contentDescription="@string/cd_pet_icon"
+                        app:srcCompat="@drawable/pets"
+                        app:tint="?attr/colorPrimary" />
+
+                    <!-- Pet Type -->
+                    <TextView
+                        android:id="@+id/pet_type"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:contentDescription="@string/cd_pet_type"
+                        android:text="@string/pet_type"
+                        android:textColor="?attr/colorOnSurface"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <!-- Gender Icon -->
+                    <ImageView
+                        android:id="@+id/imageViewGender"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_marginStart="5dp"
+                        android:contentDescription="@string/cd_gender_icon"
+                        app:srcCompat="@drawable/female"
+                        app:tint="?attr/colorPrimary" />
+
+                    <!-- Pet Gender -->
+                    <TextView
+                        android:id="@+id/pet_gender"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:contentDescription="@string/cd_pet_gender"
+                        android:text="@string/female"
+                        android:textColor="?attr/colorOnSurface"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <!-- Calendar Icon -->
+                    <ImageView
+                        android:id="@+id/imageViewCalendar"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_marginStart="5dp"
+                        android:contentDescription="@string/cd_age_icon"
+                        app:srcCompat="@drawable/calendar"
+                        app:tint="?attr/colorPrimary" />
+
+                    <!-- Pet Age -->
+                    <TextView
+                        android:id="@+id/pet_age"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:contentDescription="@string/cd_pet_age"
+                        android:text="@string/pet_age"
+                        android:textColor="?attr/colorOnSurface"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <!-- ========== Address Section ========== -->
+                <!--
+                     Align icon and first address line with center_vertical.
+                     We'll hide address2 in code if empty (see #2 below).
+                -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+                    <!-- Location Icon -->
+                    <ImageView
+                        android:id="@+id/imageViewLocation"
+                        android:layout_width="32dp"
+                        android:layout_height="wrap_content"
+                        android:contentDescription="@string/cd_location_icon"
+                        app:srcCompat="@drawable/mylocation"
+                        app:tint="?attr/colorPrimary" />
+
+                    <!-- Address Layout -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:gravity="start"
+                        android:paddingTop="5dp"
+                        android:paddingBottom="0dp">
+
+                        <!-- Address Line 1 -->
+                        <TextView
+                            android:id="@+id/address1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:contentDescription="@string/cd_address1"
+                            android:text="@string/address_1"
+                            android:textColor="?attr/colorOnSurface"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+                        <!-- Address Line 2 (will be hidden if empty in code) -->
+                        <TextView
+                            android:id="@+id/address2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="5dp"
+                            android:contentDescription="@string/cd_address2"
+                            android:text="@string/address_2"
+                            android:textColor="?attr/colorOnSurface"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+                        <!-- City, State, Zip -->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="start"
+                            android:orientation="horizontal"
+                            android:paddingTop="2dp">
+
+                            <!-- City -->
+                            <TextView
+                                android:id="@+id/city"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="10dp"
+                                android:contentDescription="@string/cd_city"
+                                android:text="@string/city"
+                                android:textColor="?attr/colorOnSurface"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+
+                            <!-- State -->
+                            <TextView
+                                android:id="@+id/state"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="5dp"
+                                android:contentDescription="@string/cd_state"
+                                android:text="@string/state"
+                                android:textColor="?attr/colorOnSurface"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+
+                            <!-- Zip -->
+                            <TextView
+                                android:id="@+id/zip"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="5dp"
+                                android:contentDescription="@string/cd_zip"
+                                android:text="@string/zip"
+                                android:textColor="?attr/colorOnSurface"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

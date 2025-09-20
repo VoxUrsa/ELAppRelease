@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/notificationCard"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="4dp"
+    app:cardBackgroundColor="?attr/colorCardBackground">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="8dp">
+
+        <!-- Notification Icon and Text -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <!-- Notification Icon -->
+            <ImageView
+                android:id="@+id/notificationIcon"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:layout_marginEnd="8dp"
+                android:src="@android:drawable/ic_dialog_info" />
+
+            <!-- Notification Text Content -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <!-- Notification Title -->
+                <TextView
+                    android:id="@+id/notificationTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Notification Title"
+                    android:textStyle="bold"
+                    android:textSize="16sp"
+                    android:maxLines="1"
+                    android:textColor="?attr/colorPrimaryDark"
+                    android:ellipsize="end"/>
+
+                <!-- Notification Message (Expandable) -->
+                <TextView
+                    android:id="@+id/notificationMessage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Notification Message"
+                    android:textColor="?attr/colorPrimaryDark"
+                    android:textSize="14sp"
+                    android:maxLines="1"
+                    android:ellipsize="end"/>
+
+            </LinearLayout>
+
+            <!-- Chevron Icon -->
+            <ImageView
+                android:id="@+id/chevronIcon"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                app:tint="?attr/colorChevron"
+                android:layout_gravity="end"
+                android:src="@drawable/ic_chevron_down"
+                android:contentDescription="@string/chevron_down_description"
+                android:layout_marginTop="4dp"/>
+
+        </LinearLayout>
+
+        <!-- Time Elapsed -->
+        <TextView
+            android:id="@+id/notificationTimeElapsed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="2 days ago"
+            android:textColor="?attr/colorPrimaryDark"
+            android:textSize="12sp" />
+
+        <!-- Expanded Image -->
+        <ImageView
+            android:id="@+id/expandedImage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:adjustViewBounds="true"
+            android:scaleType="fitCenter"
+            android:visibility="gone" />
+
+        <!-- Mark as Unread Button (Initially Hidden) -->
+        <Button
+            android:id="@+id/markAsUnreadButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:text="Mark as Unread"
+            android:visibility="gone"
+            android:layout_marginTop="8dp"/>
+
+    </LinearLayout>
+
+</com.google.android.material.card.MaterialCardView>

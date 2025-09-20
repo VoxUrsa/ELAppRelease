@@ -1,0 +1,602 @@
+<resources>
+    <string name="app_name">Emergency Leash</string>
+    <string name="password">Password</string>
+    <string name="login">Login</string>
+    <string name="emergency_leash_logo">Emergency Leash Logo</string>
+    <string name="logout">Logout</string>
+    <string name="LoggedInBodyText">
+        Thank you for logging in! \n
+        Please make sure you allow notifications if you have not done so already.  \n
+        That way we can update you if someone finds your pet!
+    </string>
+    <string name="privacyPolicy">
+        <b>Effective Date:</b> 08-20-2024 \n\n
+
+At Emergency Leash, accessible from www.emergencyleash.com, we prioritize the privacy of our visitors. This Privacy Policy document outlines the types of information that is collected and recorded by Emergency Leash and how we use it.\n\n
+
+        <b>Information We Collect</b>\n\n
+
+When you sign up for our services, we may collect the following information:\n\n
+
+        <ul>
+            <li>Email Address\n</li>
+            <li>Physical Address\n</li>
+            <li>Phone Number\n\n</li>
+        </ul>
+
+<b>How We Use Your Information</b>\n\n
+
+We use the information we collect in the following ways:\n\n
+<ul>
+    <li>To provide and maintain our Pet Reuniting service.\n</li>
+    <li>To send you important updates and notifications related to your account and service.\n</li>
+    <li>To contact you directly for purposes related to our service, including emergency communication regarding your pet.\n</li>
+    <li>To improve, personalize, and expand our website and services.\n\n</li>
+</ul>
+
+<b>Information Sharing and Disclosure</b>\n\n
+
+We value your privacy. We do not share, sell, rent, or trade your personal information with any third parties for marketing purposes. The information you provide is used solely for the purpose of providing our pet reuniting services.\n\n
+
+        <b>Data Security</b>\n\n
+
+We implement a variety of security measures to maintain the safety of your personal information. However, please note that no method of transmission over the Internet or method of electronic storage is 100% secure, and we cannot guarantee absolute security.\n\n
+
+        <b>Your Rights</b>\n\n
+
+You have the right to:\n\n
+
+        <ul>
+            <li>Access, update, or delete your personal information.\n</li>
+            <li>Withdraw your consent at any time where we relied on your consent to process your personal information.\n\n</li>
+        </ul>
+
+        To exercise any of these rights, please contact us at support@emergencyleash.com\n\n
+
+        <b>Changes to This Privacy Policy</b>\n\n
+
+We may update our Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page. You are advised to review this Privacy Policy periodically for any changes.\n\n
+
+        <b>Contact Us</b>\n\n
+
+If you have any questions about this Privacy Policy, please contact us at:\n\n
+
+Email: support@emergencyleash.com\n
+Address: 21830 Recreation Rd. Carson, CA 90745\n
+
+    </string>
+    <string name="termsOfUse">
+<b>Emergency Leash Inc. Terms of Use</b>\n\n
+
+<b>End-User License Agreement</b>\n\n
+
+<b>Last updated: 09/05/2024</b>\n\n
+
+This End-User License Agreement ("EULA") is a legally binding agreement between you, the Licensee, an individual customer or entity, and Emergency Leash Inc., located at 21830 Recreation Rd., Carson, CA 90745, the company and author of Emergency Leash, the Software, which may include associated media, printed materials, and online or electronic documentation. By accessing or using the Software, you agree to comply with the terms and conditions contained herein.\n\n
+
+If you do not agree to the terms of this EULA, you must not download, install, or use the Software.\n\n
+
+<b>Definitions</b>\n\n
+
+<ul>
+    <li>"EULA" refers to this End-User License Agreement, including any amendments.\n</li>
+    <li>"Licensee" refers to the individual or entity that downloads and uses the Software.\n</li>
+    <li>"Licensor" refers to Emergency Leash Inc.\n</li>
+    <li>"Software/Licensed Product" refers to Emergency Leash, the Licensed Product provided under this EULA.\n\n</li>
+</ul>
+
+<b>Grant of License</b>\n\n
+
+Emergency Leash Inc. grants the Licensee a royalty-free, revocable, limited, non-exclusive license to use the Software. Licensee is prohibited from making any charges for distributing the Software without explicit written consent from the Licensor.\n\n
+
+<b>Intellectual Property</b>\n\n
+
+All rights, titles, and interests in the copyrights and other intellectual property related to the Software are owned by Emergency Leash Inc. No provision of this EULA grants Licensee any rights to use intellectual property contained in the Software, except as outlined.\n\n
+
+<b>Description of Rights and Limitations</b>\n\n
+
+<ol>
+<li><b>Installation and Use:</b> The Licensee may install and use the Software for personal or business use.\n</li>
+<li><b>Reproduction and Distribution:</b> Licensee may not redistribute copies of the Software without the written permission of the Licensor.\n</li>
+    <li><b>Licensee Limitations:</b>\n</li>
+
+<ul>
+    <li>Licensee may not use the Software for unlawful purposes.\n</li>
+    <li>Licensee is prohibited from reverse engineering, decompiling, or disassembling the Software except as allowed by applicable law.\n\n</li>
+</ul>
+</ol>
+
+<b>Update and Maintenance\n\n</b>
+
+Emergency Leash Inc. may provide updates and maintenance on an as-needed basis, without any obligation to do so.\n\n
+
+<b>Support\n\n</b>
+
+Emergency Leash Inc. is not obligated to provide ongoing support or updates for the Software.\n\n
+
+<b>General Provisions\n\n</b>
+
+<ol>
+    <li><b>Termination:</b> This EULA may be terminated by either party at any time. Upon termination, the Licensee must cease all use of the Software.</li>\n
+    <li><b>Non-Transferability:</b> The rights granted in this EULA are non-transferable without prior written consent from Emergency Leash Inc.</li>\n
+    <li><b>Notice:</b> Any notice under this EULA must be provided in writing to the addresses of the parties, including email where applicable.</li>\n
+    <li><b>Severability:</b> If any provision of this EULA is found to be unenforceable, the remaining provisions will remain in effect.</li>\n
+</ol>
+
+<b>Warranty Disclaimer</b>\n\n
+
+The Software is provided "as is" without any warranty, express or implied, including but not limited to warranties of merchantability or fitness for a particular purpose. The Licensee assumes all risks associated with the use of the Software.\n\n
+
+<b>Limited Liability</b>\n\n
+
+Emergency Leash Inc. will not be liable for any damages resulting from the use or inability to use the Software. In no event will the liability exceed the amount paid by the Licensee to Emergency Leash Inc.\n\n
+
+<b>Indemnification</b>\n\n
+
+Licensee agrees to indemnify and hold Emergency Leash Inc. harmless from any claims or liabilities arising from the Licensee’s use of the Software or violation of this EULA.\n\n
+
+<b>Entire Agreement</b>\n\n
+
+This EULA constitutes the entire agreement between Emergency Leash Inc. and the Licensee, superseding any prior agreements.\n\n
+
+<b>Governing Law and Jurisdiction</b>\n\n
+
+This EULA shall be governed by the laws of the United States. Any legal action related to this EULA must be filed in the courts located in California. The prevailing party in any dispute will be entitled to recover legal fees and costs.\n\n
+</string>
+
+    <string name="FromNotificationBodyText">Your pets number has been reported! Please check your email for more information.</string>
+    <string name="todayText">Date Text</string>
+    <string name="banner_image">becomeamember</string>
+    <string name="about_text">We create a safety leash for pets that is designed to keep your furry friends safe and secure during your adventures together. Our product is durable, reliable, and easy to use, ensuring peace of mind for every pet owner.</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <!-- reCAPTCHA (Android / Cloud) -->
+    <string name="recaptcha_site_key">6Lew7swrAAAAAO5sMe3n1R3My7k0tY6vrEB_eVYl</string>
+    <string name="privacy_policy_url">https://emergencyleash.com/privacy-policy/</string>
+    <string name="terms_of_use_url">https://emergencyleash.com/terms-of-use/</string>
+
+    <string name="stored_web_client_id">410514541495-fs5d2jloqs9scn6gv1607dsbc6qvjt67.apps.googleusercontent.com</string>
+    <string name="versionNumberUpdate">Version 2025.06.03.1</string>
+    <string name="facebook_app_id">253411766456855</string>
+    <string name="fb_login_protocol_scheme">fb253411766456855</string>
+    <string name="leave">Leave</string>
+    <string name="cancel">Cancel</string>
+    <string name="server_response">Server Response</string>
+    <string name="okay">Okay</string>
+    <string name="error_occurred">An error occurred.</string>
+    <string name="failed_to_connect">Failed to connect to the server.</string>
+    <string name="additional_contact">Additional Contact %1$d</string>
+    <string name="cell_phone_number_hint">Cell Phone Number %1$d</string>
+    <string name="pet_photo_description">This is a picture of your pet</string>
+    <string name="emergency_contact_title">Emergency Contact %1$d</string>
+    <string name="save_button">Save</string>
+    <string name="cancel_button">Cancel</string>
+    <string name="admins_title">Mulit-User Access</string>
+    <string name="back_button_description">Back</string>
+
+    <!-- Admin Contact Strings -->
+    <string name="admin_contact_title">Admin Contact %1$d</string>
+    <string name="first_name_hint">First Name</string>
+    <string name="last_name_hint">Last Name</string>
+    <string name="cell_phone_hint">Cell Phone Number</string>
+    <string name="email_hint">E-mail</string>
+    <string name="save_button_text">Save</string>
+    <string name="cancel_button_text">Cancel</string>
+
+    <!-- Messages and Alerts -->
+    <string name="unsaved_changes_title">Unsaved Changes</string>
+    <string name="unsaved_changes_message">You have unsaved changes. Do you want to leave without saving?</string>
+    <string name="leave_button_text">Leave</string>
+    <string name="error_message">An error occurred.</string>
+    <string name="server_response_title">Server Response</string>
+    <string name="okay_button_text">Okay</string>
+
+    <!-- Validation Messages -->
+    <string name="invalid_email_message">The Email you entered is not valid. Please try again.</string>
+    <string name="email_not_exist_message">This email does not exist. Try a different one.</string>
+    <string name="caretaker_contact">Caretaker Contact</string>
+    <string name="emergency_contacts">Emergency Contacts</string>
+    <string name="my_pets">My Pets</string>
+    <string name="about">About</string>
+    <string name="accessibility">Accessibility</string>
+    <string name="subscriptions">Subscriptions</string>
+    <string name="dashboard">Dashboard</string>
+    <string name="faqs">FAQs</string>
+    <string name="metric_imperial">Metric/Imperial</string>
+    <string name="my_account">My Account</string>
+    <string name="my_addresses">My Addresses</string>
+    <string name="my_admins">My Admins</string>
+    <string name="my_contacts">My Contacts</string>
+    <string name="tag_replacement">Tag Replacement</string>
+    <string name="notifications">Notifications</string>
+    <string name="options">Options</string>
+    <string name="pets_registered">Pets Registered</string>
+    <string name="privacy_policy">Privacy Policy</string>
+    <string name="register_tag">Register Tag</string>
+    <string name="report_lost_pet">Report Lost Pet</string>
+    <string name="send_feedback">Send Feedback</string>
+    <string name="support">Support</string>
+    <string name="tag_id_inventory">Tag ID Inventory</string>
+    <string name="terms_of_use">Terms Of Use</string>
+    <string name="accessibility_section">Accessibility Section</string>
+    <string name="accessibility_icon">Accessibility Icon</string>
+    <string name="icon_for_pet_registration">Icon for Pet Registration</string>
+    <string name="chevron_left">Chevron Left</string>
+    <string name="save">Save</string>
+    <string name="dark_mode">Dark Mode</string>
+    <string name="username">Username</string>
+    <string name="send">Send</string>
+
+
+    <!-- Input Hints -->
+    <string name="hint_first_name">First Name</string>
+    <string name="hint_last_name">Last Name</string>
+    <string name="hint_address1">Address Line 1</string>
+    <string name="hint_address2">Address Line 2</string>
+    <string name="hint_city">City</string>
+    <string name="hint_state">State</string>
+    <string name="hint_zip">Zip Code</string>
+    <string name="hint_primary_cell">Primary Cell</string>
+
+    <!-- Autofill Hints -->
+    <string name="autofill_firstName">First Name</string>
+    <string name="autofill_lastName">Last Name</string>
+    <string name="autofill_addressLine1">Address Line 1</string>
+    <string name="autofill_addressLine2">Address Line 2</string>
+    <string name="autofill_addressLocality">City</string>
+    <string name="autofill_addressRegion">State</string>
+    <string name="autofill_postalCode">Postal Code</string>
+    <string name="autofill_phoneNumber">Phone Number</string>
+    <string name="hint_cell_phone">Cell Phone Number</string>
+    <string name="hint_email">E-mail</string>
+
+    <!-- Frequently Asked Questions -->
+    <string name="back">Back</string>
+    <string name="how_strong_is_it">How strong is it?</string>
+    <string name="how_strong_is_it_answer">Our cord is made of Kevlar fiber that is 5 times stronger than steel. This cord has a break strength at over 150 pounds.</string>
+    <string name="how_to_put_on_collar">How do you put it on the collar?</string>
+    <string name="how_to_put_on_collar_answer">Just attach the hook on the collar’s D-Ring.</string>
+    <string name="does_it_have_warranty">Does it come with a warranty?</string>
+    <string name="does_it_have_warranty_answer">Yes, our product is backed up with a one year warranty from any defects in manufacturing.</string>
+    <string name="do_you_accept_returns">Do you accept returns?</string>
+    <string name="do_you_accept_returns_answer">If you are not happy with the leash, you can return the product for a full refund within 30 days of purchase.</string>
+    <string name="send_feedback_title">Send Feedback</string>
+
+    <string name="select_issue">Select Issue</string>
+    <string name="issue_account_problem">Account Problem</string>
+    <string name="issue_bug_glitches">Bug or Glitches</string>
+    <string name="issue_app_suggestion">App Suggestion</string>
+    <string name="issue_feature_question">Feature Question</string>
+    <string name="issue_other">Other</string>
+    <string name="message_hint">Enter your message</string>
+    <string name="hint_holiday_mode_start">Holiday Mode Start</string>
+    <string name="hint_holiday_mode_end">Holiday Mode End</string>
+    <string name="emergency_contact">Emergency Contact</string>
+
+    <string name="icon_register_pet">Logo for Pet Registration</string>
+    <string name="icon_pets_registered">Logo for Pets Registered</string>
+    <string name="icon_tag_replacement">Logo for Tag Replacement</string>
+    <string name="icon_subscriptions">Logo for Subscriptions</string>
+    <string name="icon_my_account">Logo for My Account</string>
+    <string name="icon_my_contacts">Logo for My Contacts</string>
+    <string name="icon_my_admins">Logo for My Admins</string>
+    <string name="icon_my_addresses">Logo for My Addresses</string>
+    <string name="icon_notifications">Logo for Notifications</string>
+    <string name="icon_accessibility">Logo for Accessibility</string>
+    <string name="icon_measurements">Logo for Measurements</string>
+    <string name="icon_report_lost_pet">Logo for Report Lost Pet</string>
+    <string name="icon_privacy_policy">Logo for Privacy Policy</string>
+    <string name="icon_terms_of_use">Logo for Terms of Use</string>
+    <string name="icon_send_feedback">Logo for Send Feedback</string>
+    <string name="icon_faq">Logo for Frequently Asked Questions</string>
+    <string name="icon_about">Logo for About</string>
+    <string name="icon_logout">Logo for Logout</string>
+    <string name="measurements">Metric/Imperial</string>
+    <string name="icon_faqs">Icon for FAQs</string>
+
+    <string name="unsaved_changes">Unsaved Changes</string>
+    <string name="ok">OK</string>
+    <!-- General Strings -->
+
+    <!-- Addresses Titles -->
+    <string name="billing_address">Billing Address</string>
+    <string name="shipping_address">Shipping Address</string>
+
+    <!-- Billing Address Strings -->
+    <string name="hint_company">Company</string>
+    <string name="hint_country">Country</string>
+    <string name="hint_address_line_1">Address Line 1</string>
+    <string name="hint_address_line_2">Address Line 2</string>
+    <string name="hint_postcode">Postcode</string>
+    <string name="hint_phone">Phone</string>
+
+    <!-- Shipping Address Strings -->
+    <string name="hint_shipping_first_name">Shipping First Name</string>
+    <string name="hint_shipping_last_name">Shipping Last Name</string>
+    <string name="hint_shipping_company">Shipping Company</string>
+    <string name="hint_shipping_country">Shipping Country</string>
+    <string name="hint_shipping_address_line_1">Shipping Address Line 1</string>
+    <string name="hint_shipping_address_line_2">Shipping Address Line 2</string>
+    <string name="hint_shipping_city">Shipping City</string>
+    <string name="hint_shipping_state">Shipping State</string>
+    <string name="hint_shipping_postcode">Shipping Postcode</string>
+    <string name="hint_shipping_phone">Shipping Phone</string>
+    <string name="hint_shipping_email">Shipping Email</string>
+
+    <string name="pet_name">Pet Name</string>
+    <string name="edit">Edit</string>
+    <string name="female">Female</string>
+    <string name="pet_type">Pet Type</string>
+    <string name="pet_age">Age</string>
+    <string name="address_1">Address 1</string>
+    <string name="address_2">Address 2</string>
+    <string name="city">City</string>
+    <string name="state">State</string>
+    <string name="zip">Zip</string>
+
+    <!-- Content descriptions for accessibility -->
+    <string name="cd_pet_name">Pet\'s name</string>
+    <string name="cd_edit_button">Edit button</string>
+    <string name="cd_edit_text">Edit pet details</string>
+    <string name="cd_pet_photo">Pet\'s photo</string>
+    <string name="cd_pet_icon">Pet icon</string>
+    <string name="cd_pet_type">Type of pet</string>
+    <string name="cd_gender_icon">Gender icon</string>
+    <string name="cd_pet_gender">Pet\'s gender</string>
+    <string name="cd_age_icon">Age icon</string>
+    <string name="cd_pet_age">Pet\'s age</string>
+    <string name="cd_location_icon">Location icon</string>
+    <string name="cd_address1">First line of address</string>
+    <string name="cd_address2">Second line of address</string>
+    <string name="cd_city">City</string>
+    <string name="cd_state">State</string>
+    <string name="cd_zip">Zip code</string>
+    <string name="icon_chevron_right">Chevron to Continue</string>
+    <string name="settingsHeader">Settings</string>
+    <string name="settings">Settings</string>
+    <string name="emergencyleash">EmergencyLeash</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="lorem_ipsum">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam in scelerisque sem. Mauris
+        volutpat, dolor id interdum ullamcorper, risus dolor egestas lectus, sit amet mattis purus
+        dui nec risus. Maecenas non sodales nisi, vel dictum dolor. Class aptent taciti sociosqu ad
+        litora torquent per conubia nostra, per inceptos himenaeos. Suspendisse blandit eleifend
+        diam, vel rutrum tellus vulputate quis. Aliquam eget libero aliquet, imperdiet nisl a,
+        ornare ex. Sed rhoncus est ut libero porta lobortis. Fusce in dictum tellus.\n\n
+        Suspendisse interdum ornare ante. Aliquam nec cursus lorem. Morbi id magna felis. Vivamus
+        egestas, est a condimentum egestas, turpis nisl iaculis ipsum, in dictum tellus dolor sed
+        neque. Morbi tellus erat, dapibus ut sem a, iaculis tincidunt dui. Interdum et malesuada
+        fames ac ante ipsum primis in faucibus. Curabitur et eros porttitor, ultricies urna vitae,
+        molestie nibh. Phasellus at commodo eros, non aliquet metus. Sed maximus nisl nec dolor
+        bibendum, vel congue leo egestas.\n\n
+        Sed interdum tortor nibh, in sagittis risus mollis quis. Curabitur mi odio, condimentum sit
+        amet auctor at, mollis non turpis. Nullam pretium libero vestibulum, finibus orci vel,
+        molestie quam. Fusce blandit tincidunt nulla, quis sollicitudin libero facilisis et. Integer
+        interdum nunc ligula, et fermentum metus hendrerit id. Vestibulum lectus felis, dictum at
+        lacinia sit amet, tristique id quam. Cras eu consequat dui. Suspendisse sodales nunc ligula,
+        in lobortis sem porta sed. Integer id ultrices magna, in luctus elit. Sed a pellentesque
+        est.\n\n
+        Aenean nunc velit, lacinia sed dolor sed, ultrices viverra nulla. Etiam a venenatis nibh.
+        Morbi laoreet, tortor sed facilisis varius, nibh orci rhoncus nulla, id elementum leo dui
+        non lorem. Nam mollis ipsum quis auctor varius. Quisque elementum eu libero sed commodo. In
+        eros nisl, imperdiet vel imperdiet et, scelerisque a mauris. Pellentesque varius ex nunc,
+        quis imperdiet eros placerat ac. Duis finibus orci et est auctor tincidunt. Sed non viverra
+        ipsum. Nunc quis augue egestas, cursus lorem at, molestie sem. Morbi a consectetur ipsum, a
+        placerat diam. Etiam vulputate dignissim convallis. Integer faucibus mauris sit amet finibus
+        convallis.\n\n
+        Phasellus in aliquet mi. Pellentesque habitant morbi tristique senectus et netus et
+        malesuada fames ac turpis egestas. In volutpat arcu ut felis sagittis, in finibus massa
+        gravida. Pellentesque id tellus orci. Integer dictum, lorem sed efficitur ullamcorper,
+        libero justo consectetur ipsum, in mollis nisl ex sed nisl. Donec maximus ullamcorper
+        sodales. Praesent bibendum rhoncus tellus nec feugiat. In a ornare nulla. Donec rhoncus
+        libero vel nunc consequat, quis tincidunt nisl eleifend. Cras bibendum enim a justo luctus
+        vestibulum. Fusce dictum libero quis erat maximus, vitae volutpat diam dignissim.
+    </string>
+
+    <string name="membership">Membership</string>
+    <string name="special_offer">Special Offer</string>
+    <string name="emergencyleash_plus">EmergencyLeash Plus+</string>
+    <string name="something_here">Something should go here</string>
+    <string name="one_tag_price">$5.99</string>
+    <string name="six_months">6 Months</string>
+    <string name="multiple_tags_price">$9.99</string>
+    <string name="ten_per_pet">10 (Per Pet)</string>
+    <string name="fifty_percent_off">50% OFF\n(5 Tags)</string>
+    <string name="something_footer">Something should go here</string>
+    <string name="get_plus_now">Get Plus+ Now</string>
+    <string name="emergencyleash_plusplus">Plus+</string>
+
+
+    <string name="free">Free</string>
+    <string name="one_tag">One Tag</string>
+    <string name="multiple_tags">Multiple Tags</string>
+
+    <!-- Descriptions -->
+    <string name="multi_user_connect">Multi-User\nConnect</string>
+    <string name="pet_alert_cooldown">Pet Alert\nCooldown</string>
+    <string name="multiple_addresses">Multiple\nAddresses</string>
+    <string name="lost_pet_flyers">Lost Pet\nFlyers</string>
+    <string name="medical_information">Medical\nInformation</string>
+    <string name="tag_replacements">Tag\nReplacements</string>
+    <string name="text_sms_alerts">Text SMS\nAlerts</string>
+    <string name="email_alerts">Email\nAlerts</string>
+    <string name="media_gallery">Media\nGallery</string>
+    <string name="emergency_contacts_membership">Emergency\nContacts</string>
+    <string name="gps_location_pin">GPS Location\nPin</string>
+    <string name="caretaker_holiday_mode">Caretaker\nHoliday Mode</string>
+    <string name="gallery_image_description">Gallery Image</string>
+    <!-- Membership details -->
+    <string name="no">No</string>
+    <string name="yes_up_to_10">Yes\n(Up to 10)</string>
+    <string name="ninety_days">90 Days</string>
+    <string name="sixty_days">60 Days</string>
+    <string name="zero">0</string>
+    <string name="five">5</string>
+    <string name="ten">10\n(Per Pet)</string>
+    <string name="twenty_five_percent_off">25% OFF\n(3 Tags)</string>
+    <string name="fifty_percent_off_5_tags">50% OFF\n(5 Tags)</string>
+    <string name="fifty_percent_off_10_tags">50% OFF\n(10 Tags)</string>
+    <string name="five_images">5 images</string>
+    <string name="fifteen_images">15 images</string>
+    <string name="thirty_images">30 images</string>
+    <string name="forty_images_per_pet">40 images\n(Per Pet)</string>
+    <string name="add_image">Add Image</string>
+    <string name="my_tags">My Tags</string>
+    <string name="my_subscription">My Subscriptions</string>
+
+    <!-- Subscription Details -->
+    <string name="subscription_name">Subscription Name</string>
+    <string name="subscription_status">Subscription Status</string>
+    <string name="start_date">Start Date</string>
+    <string name="next_payment_date">Next Payment Date</string>
+    <string name="login_screen_title">Login to Emergency Leash</string>
+    <string name="membership_header">Membership Information</string>
+    <string name="plus_benefits_title">Emergency Leash Plus+ Benefits</string>
+    <string name="plus_benefits_description">Enjoy additional features and benefits for you and your pet.</string>
+    <string name="free_plan_features">Free Plan Features</string>
+    <string name="plus_plan_features">Plus+ Plan Features</string>
+    <string name="pet_tracking_title">Pet Tracking Features</string>
+    <string name="pet_tracking_description">Use our tracking features to keep your pets safe and secure.</string>
+    <string name="subscription_expiry">Subscription Expiry Date</string>
+    <string name="membership_expiry">Membership Expiry</string>
+    <string name="pet_photo_label">Pet Photo</string>
+    <string name="scan_pet_tag">Scan Pet Tag</string>
+    <string name="register_new_tag">Register New Tag</string>
+    <string name="edit_contact_info">Edit Contact Information</string>
+    <string name="update_pet_details">Update Pet Details</string>
+    <string name="pet_medical_info">Medical Information</string>
+    <string name="emergency_contact_help">Emergency Contact Help</string>
+    <string name="pet_notes">Pet Notes</string>
+    <string name="subscription_plan">Subscription Plan</string>
+    <string name="active_subscription">Active Subscription</string>
+    <string name="choose_membership_plan">Choose a Membership Plan</string>
+    <string name="sign_up_now">Sign Up Now</string>
+    <string name="faq_question_prefix">Q: </string>
+    <string name="faq_answer_prefix">A: </string>
+    <string name="app_version">App Version</string>
+    <string name="update_now">Update Now</string>
+    <string name="update_available">New Update Available!</string>
+    <string name="scan_qr_code">Scan QR Code</string>
+    <string name="view_faqs">View FAQs</string>
+    <string name="register_pet">Register Your Pet</string>
+    <string name="upgrade_to_plus">Upgrade to Plus+</string>
+    <string name="view_more">View More</string>
+    <string name="download_complete">Download Complete</string>
+    <string name="loading">Loading…</string>
+    <string name="syncing">Syncing Data…</string>
+    <string name="account_verified">Account Verified Successfully!</string>
+    <string name="verification_failed">Verification Failed. Try Again.</string>
+    <string name="choose_pet_photo">Choose Pet Photo</string>
+    <string name="remove_image">Remove Image</string>
+    <string name="bi_yearly">Bi-Yearly</string>
+    <string name="one_tag_price_per_month">($1.00/month)</string>
+    <string name="multiple_tags_price_per_month">($1.67/month)</string>
+    <!-- Error Messages -->
+    <string name="failed_to_load_subscription">Failed to load subscription.</string>
+    <string name="no_subscription_info">No subscription information available.</string>
+    <string name="addTag">Add Tag</string>
+    <string name="orderReplacement">Order Replacement</string>
+    <string name="add_document">Add Document (PDF, DOC, DOCX, or TXT)</string>
+    <string name="selected_date">Selected Date: %1$s</string>
+    <string name="today_date">Today: %1$s</string>
+    <string name="member_since">Member Since %1$s</string>
+
+    <string name="hint_username">Username</string>
+    <string name="hint_password">Password</string>
+    <string name="register_button">Register</string>
+
+    <string name="register">Register</string>
+
+
+    <string name="dialog_registration_success_title">Thank you for registering!</string>
+    <string name="dialog_registration_success_message">Now you can log in!</string>
+    <string name="dialog_button_ok">OK</string>
+
+    <!-- Error Messages -->
+    <string name="registration_failed_network">Registration failed. Please check your network connection and try again.</string>
+    <string name="registration_failed_generic">Registration failed. Please try again later.</string>
+    <string name="invalid_zip_code">Please enter a valid US ZIP code</string>
+    <string name="fill_required_fields">Please fill all required fields</string>
+
+
+    <string name="create_missing_pet_flyer">Create Missing Pet Flyer</string>
+    <string name="enter_description">Enter a description</string>
+    <string name="enter_reward_amount">Enter reward amount</string>
+    <string name="enter_contact_number">Enter contact number</string>
+    <string name="select_image">Select Image</string>
+    <string name="generate_flyer">Generate Flyer</string>
+    <string name="flyer_generated">Flyer generated!</string>
+    <string name="fill_all_fields">Please fill out all fields and select an image</string>
+    <string name="send_alert">Send Alert</string>
+    <string name="print_lost_pet_flyer">Generate Lost \n Pet Flyer</string>
+
+
+    <string name="report_lost_pet_confirmation">Report This Pet as Lost?</string>
+    <string name="notification_broadcast_warning">(This will send a notification broadcast)</string>
+    <string name="continue_button_text">Continue</string>
+    <string name="mark_pet_as_found">Report Pet As Found</string>
+    <string name="mark_pet_as_lost">Report Pet As Lost</string>
+    <string name="error_fetching_data">Error Fetching Data</string>
+    <string name="error_parsing_data">Error parsing data.</string>
+
+    <string name="desc_clock_icon">Clock Icon</string>
+    <string name="desc_edit_icon">Edit Icon</string>
+    <string name="first_name">First Name</string>
+    <string name="last_name">Last Name</string>
+    <string name="desc_location_icon">Location Icon</string>
+    <string name="address1">Address 1</string>
+    <string name="address2">Address 2</string>
+    <string name="desc_person_add_icon">Add Person Icon</string>
+    <string name="add_more_contacts">Add More Contacts</string>
+    <string name="ensure_pets_safety">Ensure Your Pet\'s Safety</string>
+    <string name="no_pets_found">No pets found.</string>
+
+    <string name="login_with_google">Sign in with Google</string>
+    <string name="login_with_facebook">Sign in with Facebook</string>
+    <string name="google_logo_desc">Google Logo</string>
+    <string name="facebook_logo_desc">Facebook Logo</string>
+    <string name="chevron_down_description">An indicator for menu operation</string>
+    <string name="update_successful">Update Successful!</string>
+    <string name="FlyerDialogBodyText">Your Flyer has been created and can be found in your download folder.</string>
+    <string name="LoginTitles">Login or Join</string>
+    <string name="share">Share</string>
+    <string name="view_map">View Map</string>
+    <string name="longitude">LONGITUDE</string>
+    <string name="latitude">LATITUDE</string>
+    <string name="no_scans_message">There are no scans available</string>
+    <string name="desc_pet_image">A picture of a pet</string>
+    <string name="registernewpet">Register A New Pet</string>
+    <string name="multiuseraccess">Multi-User Access</string>
+
+
+    <string name="notification_settings">Notification Settings</string>
+    <string name="push_notifications">Push Notifications</string>
+    <string name="email_notifications">Email Notifications</string>
+    <string name="sms_notifications">SMS Notifications</string>
+    <string name="subscription_locked">Only available with an active subscription</string>
+    <string name="dialog_cancel">Cancel</string>
+    <string name="add_notifications_permissions">Allow Notifications</string>
+    <string name="add_notifications_permissions_subtext">Adjust notifications permissions to ensure your pet\'s safety</string>
+
+    <string name="photo_selected">Photo Selected</string>
+    <string name="login_required">Please log in before registering a tag</string>
+    <string name="required_fields_missing">Please fill out all required fields</string>
+    <string name="image_read_error">Failed to read image data</string>
+    <string name="image_too_large">Image is larger than %1$d MB. Please choose a smaller file.</string>
+    <string name="upload_failed">Failed to save pet information: %1$s</string>
+    <string name="forgot_password">Forgot password?</string>
+    <string name="dialog_leave_app_title">Leave Emergency Leash?</string>
+    <string name="dialog_leave_app_message">You’re about to open an external site in your browser. Do you want to continue?</string>
+    <string name="continue_button">Continue</string>
+
+
+    <!-- External-link confirmation -->
+    <string name="external_site_title">Leaving Emergency Leash</string>
+    <string name="external_site_message">You’re about to open your browser and visit EmergencyLeash.com. Continue?</string>
+    <string name="continue_label">Continue</string>
+</resources>

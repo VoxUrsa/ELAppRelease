@@ -1,0 +1,49 @@
+# --- Android/Gradle project ---
+*.iml
+.gradle/
+.localrc
+/local.properties
+/.idea/caches
+/.idea/libraries
+/.idea/modules.xml
+/.idea/workspace.xml
+/.idea/navEditor.xml
+/.idea/assetWizardSettings.xml
+.DS_Store
+
+# Build outputs
+/build
+**/build/
+/captures
+.externalNativeBuild/
+.cxx/
+
+# --- Google/Firebase (client-side) ---
+# google-services.json belongs on the machine, not in git
+**/google-services.json
+
+# --- Keystores & signing (never commit) ---
+*.jks
+*.keystore
+*.keystore.*
+keystore.properties
+signing.properties
+*.p12
+*.pem
+*.der
+*.key
+
+# --- Service accounts & backend creds (never commit) ---
+**/*service*account*.json
+**/firebase-adminsdk-*.json
+
+# --- Env / secrets (keep them local) ---
+.env
+.env.*
+*.env
+*.secret
+secrets.*
+secrets.properties
+
+# Optional: Android Studio miscellany you don't want to chase
+others.xml

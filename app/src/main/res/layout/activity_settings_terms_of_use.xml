@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/colorTabHeaderBackground">
+
+    <!-- Tab-like view -->
+    <View
+        android:id="@+id/tabView"
+        android:layout_width="0dp"
+        android:layout_height="25dp"
+        android:background="@drawable/tab_background"
+        app:layout_constraintWidth_percent="0.65"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="2dp"/>
+
+    <!-- Background with curved top corners, placed below the tab -->
+    <LinearLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="0dp"
+        android:background="@drawable/curved_top_background"
+        android:orientation="vertical"
+        android:paddingLeft="16dp"
+        android:paddingTop="16dp"
+        android:paddingRight="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tabView">
+
+        <!-- Title and Chevron Row -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/registerPetTitle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Terms of Use"
+                android:textSize="26sp"
+                android:textStyle="bold"
+                android:textColor="?attr/colorPrimaryText"/>
+
+            <ImageView
+                android:id="@+id/chevronLeft"
+                android:layout_width="@dimen/spacingList"
+                android:layout_height="@dimen/spacingList"
+                android:contentDescription="Chevron Left"
+                android:src="@drawable/ic_chevron_left"
+                app:tint="?attr/colorChevron" />
+
+        </LinearLayout>
+
+        <!-- Horizontal Rule -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="?attr/colorChevron" />
+    </LinearLayout>
+
+    <!-- Scrollable content -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="?attr/colorTabBackground"
+        app:layout_constraintTop_toBottomOf="@id/container"
+        app:layout_constraintBottom_toTopOf="@id/buttonContainer">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingTop="16dp"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:paddingBottom="60dp"> <!-- Adjust paddingBottom as needed -->
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="300dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/spacingMain"
+                app:srcCompat="?attr/logoDrawable" />
+
+            <TextView
+                android:id="@+id/privacyPolicyText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacingMain"
+                android:text="@string/termsOfUse"
+                android:textColor="?attr/colorPrimaryText"
+                android:textSize="20sp" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Cancel and Save Button -->
+    <LinearLayout
+        android:id="@+id/buttonContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/spacingMain"
+        android:background="?attr/colorTabBackground"
+        android:gravity="start"
+        android:orientation="horizontal"
+        android:padding="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <Button
+            android:id="@+id/cancelButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:backgroundTint="@color/colorRed"
+            android:textSize="24dp"
+            android:text="Back"
+            android:textColor="@color/white"/>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/create_missing_pet_flyer"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:paddingBottom="8dp" />
+
+    <!-- RecyclerView for displaying images as thumbnails -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/imageRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginBottom="16dp"
+        android:scrollbars="vertical"
+        android:padding="4dp"
+        android:layout_gravity="center"
+        android:clipToPadding="false" />
+
+    <!-- Description Input -->
+    <EditText
+        android:id="@+id/flyerDescription"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/enter_description"
+        android:inputType="textMultiLine" />
+
+    <!-- Reward Input -->
+    <EditText
+        android:id="@+id/flyerReward"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/enter_reward_amount"
+        android:inputType="numberDecimal" />
+
+    <!-- Contact Number Input -->
+    <EditText
+        android:id="@+id/flyerContact"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/enter_contact_number"
+        android:inputType="phone" />
+
+    <!-- Generate Flyer Button -->
+    <Button
+        android:id="@+id/generateFlyerBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/generate_flyer" />
+
+</LinearLayout>

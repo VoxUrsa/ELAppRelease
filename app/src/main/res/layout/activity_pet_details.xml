@@ -1,0 +1,2311 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/colorTabHeaderBackground">
+
+    <!-- Tab-like view -->
+    <View
+        android:id="@+id/tabView"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="2dp"
+        android:background="@drawable/tab_background"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_percent="0.65" />
+
+    <!-- Main Content Container -->
+    <LinearLayout
+        android:id="@+id/contentContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="30dp"
+        android:orientation="vertical"
+        android:paddingLeft="16dp"
+        android:paddingTop="16dp"
+        android:paddingRight="16dp"
+        android:background="@drawable/curved_top_background"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tabView">
+
+        <!-- Title and Chevron Row -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingBottom="16dp">
+
+            <TextView
+                android:id="@+id/petDetailsTitle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Pet Details"
+                android:textColor="?attr/colorPrimaryText"
+                android:textSize="26sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/chevronLeft"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:contentDescription="Chevron Left"
+                android:src="@drawable/ic_chevron_left"
+                app:tint="?attr/colorChevron" />
+
+        </LinearLayout>
+
+        <!-- Horizontal Rule -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="?attr/colorChevron"
+            android:layout_marginBottom="16dp" />
+
+        <!-- ScrollView for Pet Details -->
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:fillViewport="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <!-- Top Section: Pet Photo and Basic Info -->
+                <!-- Top Section: Pet Photo and Basic Info -->
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    app:cardCornerRadius="12dp"
+                    app:cardElevation="4dp"
+                    android:background="?attr/colorSurface">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="16dp">
+
+                        <!-- Pet Photo -->
+                        <ImageView
+                            android:id="@+id/petPhoto"
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:src="@drawable/ic_pet_placeholder"
+                            android:scaleType="centerCrop"
+                            android:layout_gravity="center_vertical"
+                            android:background="@drawable/circle_background" />
+
+                        <!-- Pet Info -->
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_weight="1"
+                            android:layout_marginStart="16dp">
+
+                            <!-- Pet Name and Edit Icon placed inside ConstraintLayout -->
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/petNameContainer">
+
+                                <TextView
+                                    android:id="@+id/petName"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Trinity"
+                                    android:textSize="22sp"
+                                    android:textStyle="bold"
+                                    android:textColor="?attr/colorPrimaryText"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    app:layout_constraintBottom_toBottomOf="parent" />
+
+                                <ImageView
+                                    android:id="@+id/editPetNameIcon"
+                                    android:layout_width="24dp"
+                                    android:layout_height="24dp"
+                                    android:layout_marginStart="8dp"
+                                    android:contentDescription="Edit Pet Name"
+                                    android:src="@drawable/edit"
+                                    app:tint="?attr/colorPrimaryText"
+                                    app:layout_constraintStart_toEndOf="@id/petName"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    app:layout_constraintBottom_toBottomOf="parent" />
+
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+
+                            <!-- Address Info Broken into Components -->
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:layout_marginTop="4dp">
+
+                                <TextView
+                                    android:id="@+id/address1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="8601 International Ave"
+                                    android:textSize="14sp"
+                                    android:textColor="?attr/colorPrimaryText"
+                                    android:layout_marginTop="4dp" />
+
+                                <!-- Address2 is hidden when empty -->
+                                <TextView
+                                    android:id="@+id/address2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text=""
+                                    android:textSize="14sp"
+                                    android:textColor="?attr/colorPrimaryText"
+                                    android:visibility="gone"
+                                    android:layout_marginTop="4dp" />
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal"
+                                    android:layout_marginTop="4dp">
+
+                                    <TextView
+                                        android:id="@+id/city"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Canoga Park"
+                                        android:textSize="14sp"
+                                        android:textColor="?attr/colorPrimaryText" />
+
+                                    <TextView
+                                        android:id="@+id/comma"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text=", "
+                                        android:textSize="14sp"
+                                        android:textColor="?attr/colorPrimaryText" />
+
+                                    <TextView
+                                        android:id="@+id/state"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="CA"
+                                        android:textSize="14sp"
+                                        android:textColor="?attr/colorPrimaryText" />
+
+                                    <TextView
+                                        android:id="@+id/space"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text=" "
+                                        android:textSize="14sp"
+                                        android:textColor="?attr/colorPrimaryText" />
+
+                                    <TextView
+                                        android:id="@+id/zip"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="91304"
+                                        android:textSize="14sp"
+                                        android:textColor="?attr/colorPrimaryText" />
+                                </LinearLayout>
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+
+
+
+                <!-- Full-Width Mark Pet as Found Card -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/markPetAsLostCard"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:backgroundTint="?attr/colorSurface"
+                    android:elevation="6dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:layout_marginBottom="16dp"
+                    app:cardCornerRadius="16dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="16dp">
+
+                        <!-- Background Icon -->
+                        <ImageView
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:layout_centerInParent="true"
+                            android:alpha="0.6"
+                            android:src="@drawable/ic_alert"
+                            app:tint="@android:color/darker_gray" />
+
+                        <!-- Main Text -->
+                        <TextView
+                            android:id="@+id/markPetAsLostText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="8dp"
+                            android:text="@string/mark_pet_as_lost"
+                            android:textColor="?attr/colorPrimaryText"
+                            android:textSize="24sp"
+                            android:textStyle="bold" />
+
+                    </RelativeLayout>
+                </androidx.cardview.widget.CardView>
+
+
+
+
+
+
+
+
+
+
+
+                <!-- Container for Side-by-Side Cards -->
+                <LinearLayout
+                    android:id="@+id/petMissingOptions"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    android:layout_marginBottom="16dp"
+                    >
+
+                    <!-- Report Lost Pet Card -->
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/sendAlertCard"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginEnd="8dp"
+                        android:backgroundTint="?attr/colorSurface"
+                        android:elevation="6dp"
+                        android:clickable="true"
+                        android:focusable="true"
+                        app:cardCornerRadius="16dp">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="16dp">
+
+                            <!-- Background Icon -->
+                            <ImageView
+                                android:layout_width="100dp"
+                                android:layout_height="100dp"
+                                android:layout_centerInParent="true"
+                                android:alpha="0.6"
+                                android:src="@drawable/ic_alert"
+                                app:tint="@android:color/darker_gray" />
+
+                            <!-- Main Text -->
+                            <TextView
+                                android:id="@+id/sendAlertText"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginTop="8dp"
+                                android:text="@string/send_alert"
+                                android:textColor="?attr/colorPrimaryText"
+                                android:textSize="24sp"
+                                android:textStyle="bold" />
+
+
+                        </RelativeLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <!-- Create Flyer Card -->
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/createFlyerCard"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:backgroundTint="?attr/colorSurface"
+                        android:elevation="6dp"
+                        android:clickable="true"
+                        android:focusable="true"
+                        app:cardCornerRadius="16dp">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="16dp">
+
+                            <!-- Background Icon -->
+                            <ImageView
+                                android:layout_width="100dp"
+                                android:layout_height="100dp"
+                                android:layout_centerInParent="true"
+                                android:src="@drawable/ic_flyer"
+                                android:alpha="0.6"
+                                app:tint="@android:color/darker_gray" />
+
+                            <!-- Main Text -->
+                            <TextView
+                                android:id="@+id/printFlyerText"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginTop="8dp"
+                                android:text="@string/print_lost_pet_flyer"
+                                android:textSize="24sp"
+                                android:textStyle="bold"
+                                android:textColor="?attr/colorPrimaryText" />
+
+                        </RelativeLayout>
+                    </androidx.cardview.widget.CardView>
+
+                </LinearLayout>
+
+                <!-- Full-Width Mark Pet as Found Card -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/markPetAsFoundCard"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:backgroundTint="?attr/colorSurface"
+                    android:elevation="6dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:layout_marginBottom="16dp"
+                    app:cardCornerRadius="16dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="16dp">
+
+                        <!-- Background Icon -->
+                        <ImageView
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:layout_centerInParent="true"
+                            android:alpha="0.6"
+                            android:src="@drawable/ic_alert"
+                            app:tint="@android:color/darker_gray" />
+
+                        <!-- Main Text -->
+                        <TextView
+                            android:id="@+id/markPetAsFoundText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="8dp"
+                            android:text="@string/mark_pet_as_found"
+                            android:textColor="?attr/colorPrimaryText"
+                            android:textSize="24sp"
+                            android:textStyle="bold" />
+
+                    </RelativeLayout>
+                </androidx.cardview.widget.CardView>
+
+                <!-- Detailed Info Section -->
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:elevation="4dp"
+                    app:cardCornerRadius="12dp"
+                    android:layout_marginBottom="16dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:background="?attr/colorSurface"
+                        android:padding="16dp">
+
+                        <!-- Pet Type Section -->
+                        <LinearLayout
+                            android:id="@+id/petTypeContainer"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:clickable="true"
+                            android:focusable="true"> <!-- Make the whole section clickable -->
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Pet Type"
+                                android:textSize="12sp"
+                                android:textColor="?attr/colorPrimaryText" />
+
+                            <TextView
+                                android:id="@+id/petType"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Cat"
+                                android:textColor="?attr/colorPrimaryText"
+                                android:textSize="16sp"
+                                android:textStyle="bold"
+                                android:layout_marginTop="8dp"/> <!-- Add margin to give space -->
+
+                        </LinearLayout>
+
+                        <!-- Vertical Divider -->
+                        <View
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent"
+                            android:background="@color/black"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginEnd="16dp" />
+
+                        <!-- Gender Section -->
+                        <LinearLayout
+                            android:id="@+id/petGenderContainer"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:clickable="true"
+                            android:focusable="true"> <!-- Make the whole section clickable -->
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Gender"
+                                android:textSize="12sp"
+                                android:textColor="?attr/colorPrimaryText" />
+
+                            <TextView
+                                android:id="@+id/petGender"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Female"
+                                android:textSize="16sp"
+                                android:textStyle="bold"
+                                android:textColor="?attr/colorPrimaryText"
+                                android:layout_marginTop="8dp"/> <!-- Add margin to give space -->
+
+                        </LinearLayout>
+
+                        <!-- Vertical Divider -->
+                        <View
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent"
+                            android:background="@color/black"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginEnd="16dp" />
+
+                        <!-- Age Section -->
+                        <LinearLayout
+                            android:id="@+id/petAgeContainer"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:clickable="true"
+                            android:focusable="true"> <!-- Make the whole section clickable -->
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Age"
+                                android:textSize="12sp"
+                                android:textColor="?attr/colorPrimaryText" />
+
+                            <TextView
+                                android:id="@+id/petAge"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="6 Months"
+                                android:textSize="16sp"
+                                android:textStyle="bold"
+                                android:textColor="?attr/colorPrimaryText"
+                                android:layout_marginTop="8dp"/>
+
+                        </LinearLayout>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <!-- About Section - Card -->
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="12dp"
+                    app:cardElevation="4dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="8dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="16dp">
+
+                        <!-- Title and Chevron Row -->
+                        <LinearLayout
+                            android:id="@+id/aboutHeader"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:gravity="center_vertical"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:padding="8dp">
+
+                            <!-- Title -->
+                            <TextView
+                                android:id="@+id/aboutTitle"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="About"
+                                android:textSize="18sp"
+                                android:textStyle="bold"
+                                android:textColor="?attr/colorPrimaryText"/>
+
+                            <!-- Chevron (Up/Down Toggle) -->
+                            <ImageView
+                                android:id="@+id/chevronIcon"
+                                android:layout_width="48dp"
+                                android:layout_height="48dp"
+
+                                android:src="@drawable/ic_chevron_down"
+                                android:contentDescription="Toggle Section"
+                                app:tint="?attr/colorChevron" />
+
+                        </LinearLayout>
+                        <!-- Horizontal Rule -->
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="2dp"
+                            android:background="?attr/colorChevron" />
+                        <!-- Updated to include edit icon -->
+                        <LinearLayout
+                            android:id="@+id/aboutContentContainer"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:gravity="center_vertical"
+                            android:layout_marginTop="16dp"
+                            android:layout_marginBottom="16dp"
+                            >
+
+                            <TextView
+                                android:id="@+id/aboutContent"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="My cat is awesome..."
+                                android:textSize="18sp"
+                                android:textColor="?attr/colorPrimaryText" />
+
+                            <!-- Edit Icon -->
+                            <ImageView
+                                android:id="@+id/editAboutIcon"
+                                android:layout_width="32dp"
+                                android:layout_height="32dp"
+                                android:src="@drawable/edit"
+                                android:contentDescription="Edit About"
+                                android:paddingStart="8dp"
+                                app:tint="?attr/colorPrimaryText" />
+
+                        </LinearLayout>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+
+
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="12dp"
+                    app:cardElevation="4dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="8dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="16dp">
+
+                        <!-- Title and Chevron Row -->
+                        <LinearLayout
+                            android:id="@+id/generalInfoHeader"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:gravity="center_vertical"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:padding="8dp">
+
+                            <!-- Title -->
+                            <TextView
+                                android:id="@+id/generalInfoTitle"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="General Info"
+                                android:textSize="18sp"
+                                android:textStyle="bold"
+                                android:textColor="?attr/colorPrimaryText"/>
+
+                            <!-- Chevron (Up/Down Toggle) -->
+                            <ImageView
+                                android:id="@+id/generalInfoChevronIcon"
+                                android:layout_width="48dp"
+                                android:layout_height="48dp"
+                                android:src="@drawable/ic_chevron_down"
+                                android:contentDescription="Toggle Section"
+                                app:tint="?attr/colorChevron" />
+
+                        </LinearLayout>
+
+                        <!-- Horizontal Rule -->
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="2dp"
+                            android:background="?attr/colorChevron" />
+
+                        <!-- Collapsible Content for General Info -->
+                        <LinearLayout
+                            android:id="@+id/generalInfoContent"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:gravity="center"
+                            android:layout_marginTop="8dp">
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:id="@+id/breedContainer"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:padding="8dp"
+                                android:clickable="true"
+                                android:focusable="true">
+
+                                <!-- Title -->
+                                <TextView
+                                    android:id="@+id/generalInfoBreedTitle"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Breed"
+                                    android:textSize="16sp"
+                                    android:textStyle="bold"
+                                    android:textColor="?attr/colorPrimaryText"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintVertical_chainStyle="packed" />
+
+                                <!-- Value -->
+                                <TextView
+                                    android:id="@+id/petBreed"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:text="Standard Tactical Issue"
+                                    android:textSize="14sp"
+                                    android:textColor="?attr/colorPrimaryText"
+                                    android:gravity="center"
+                                    app:layout_constraintTop_toBottomOf="@id/generalInfoBreedTitle"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    android:layout_marginTop="8dp" />
+
+                                <!-- Edit Icon -->
+                                <ImageView
+                                    android:id="@+id/editBreedIcon"
+                                    android:layout_width="24dp"
+                                    android:layout_height="24dp"
+                                    android:src="@drawable/edit"
+                                    android:contentDescription="Edit Breed"
+                                    app:layout_constraintTop_toBottomOf="@id/petBreed"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    android:layout_marginTop="8dp"
+                                    app:tint="?attr/colorPrimaryText" />
+
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:id="@+id/weightContainer"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:padding="8dp"
+                                android:clickable="true"
+                                android:focusable="true">
+
+                                <!-- Title -->
+                                <TextView
+                                    android:id="@+id/generalInfoWeightTitle"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Weight"
+                                    android:textSize="16sp"
+                                    android:textStyle="bold"
+                                    android:textColor="?attr/colorPrimaryText"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintVertical_chainStyle="packed" />
+
+                                <!-- Value and Unit -->
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal"
+                                    android:gravity="center"
+                                    app:layout_constraintTop_toBottomOf="@id/generalInfoWeightTitle"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    android:layout_marginTop="8dp">
+
+                                    <TextView
+                                        android:id="@+id/petWeight"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="9"
+                                        android:textSize="14sp"
+                                        android:textColor="?attr/colorPrimaryText"
+                                        android:gravity="center" />
+
+                                    <TextView
+                                        android:id="@+id/weightUnitLabel"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="kg"
+                                        android:textSize="14sp"
+                                        android:textColor="?attr/colorPrimaryText"
+                                        android:gravity="center"
+                                        android:layout_marginStart="4dp" />
+
+                                </LinearLayout>
+
+                                <!-- Edit Icon -->
+                                <ImageView
+                                    android:id="@+id/editWeightIcon"
+                                    android:layout_width="24dp"
+                                    android:layout_height="24dp"
+                                    android:src="@drawable/edit"
+                                    android:contentDescription="Edit Weight"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    android:layout_marginTop="8dp"
+                                    app:tint="?attr/colorPrimaryText" />
+
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:id="@+id/spayedContainer"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:padding="8dp"
+                                android:clickable="true"
+                                android:focusable="true">
+
+                                <!-- Title -->
+                                <TextView
+                                    android:id="@+id/generalInfoSpayedTitle"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Spayed/Neutered"
+                                    android:textSize="16sp"
+                                    android:textStyle="bold"
+                                    android:textColor="?attr/colorPrimaryText"
+                                    android:gravity="center"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintVertical_chainStyle="packed" />
+
+                                <!-- Value -->
+                                <TextView
+                                    android:id="@+id/petSpayed"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:text="No"
+                                    android:textSize="14sp"
+                                    android:textColor="?attr/colorPrimaryText"
+                                    android:gravity="center"
+                                    app:layout_constraintTop_toBottomOf="@id/generalInfoSpayedTitle"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    android:layout_marginTop="8dp" />
+
+                                <!-- Edit Icon -->
+                                <ImageView
+                                    android:id="@+id/editSpayedIcon"
+                                    android:layout_width="24dp"
+                                    android:layout_height="24dp"
+                                    android:src="@drawable/edit"
+                                    android:contentDescription="Edit Spayed"
+                                    app:layout_constraintTop_toBottomOf="@id/petSpayed"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    android:layout_marginTop="8dp"
+                                    app:tint="?attr/colorPrimaryText" />
+
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        </LinearLayout>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+
+
+
+
+
+<!--                &lt;!&ndash; Social Section - Card &ndash;&gt;
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="12dp"
+                    app:cardElevation="4dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="8dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="16dp">
+
+                        &lt;!&ndash; Title and Chevron Row &ndash;&gt;
+                        <LinearLayout
+                            android:id="@+id/socialHeader"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:gravity="center_vertical"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:padding="8dp">
+
+                            &lt;!&ndash; Title &ndash;&gt;
+                            <TextView
+                                android:id="@+id/socialTitle"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="Social"
+                                android:textSize="18sp"
+                                android:textStyle="bold"
+                                android:textColor="?attr/colorPrimaryText"/>
+
+                            &lt;!&ndash; Chevron (Up/Down Toggle) &ndash;&gt;
+                            <ImageView
+                                android:id="@+id/socialChevronIcon"
+                                android:layout_width="48dp"
+                                android:layout_height="48dp"
+                                android:src="@drawable/ic_chevron_down"
+                                android:contentDescription="Toggle Section"
+                                app:tint="?attr/colorChevron" />
+
+                        </LinearLayout>
+
+                        &lt;!&ndash; Horizontal Rule &ndash;&gt;
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="2dp"
+                            android:background="?attr/colorChevron" />
+
+                        &lt;!&ndash; Collapsible Content with 3 Social Media Sections &ndash;&gt;
+                        <LinearLayout
+                            android:id="@+id/socialContent"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:gravity="center"
+                            android:layout_marginTop="8dp"
+                            android:visibility="gone">
+
+                            &lt;!&ndash; TikTok Section &ndash;&gt;
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="vertical"
+                                android:gravity="center_horizontal">
+
+                                <TextView
+                                    android:id="@+id/tiktokTitle"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="TikTok"
+                                    android:textSize="16sp"
+                                    android:textStyle="bold"
+                                    android:textColor="?attr/colorPrimaryText"
+                                    android:layout_gravity="center"/>
+
+                                <TextView
+                                    android:id="@+id/addTikTok"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="+Add"
+                                    android:textSize="14sp"
+                                    android:textColor="@android:color/holo_blue_dark"
+                                    android:layout_marginTop="8dp"
+                                    android:layout_gravity="center"/>
+                            </LinearLayout>
+
+                            &lt;!&ndash; Instagram Section &ndash;&gt;
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="vertical"
+                                android:gravity="center_horizontal">
+
+                                <TextView
+                                    android:id="@+id/instagramTitle"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Instagram"
+                                    android:textSize="16sp"
+                                    android:textStyle="bold"
+                                    android:textColor="?attr/colorPrimaryText"
+                                    android:layout_gravity="center"/>
+
+                                <TextView
+                                    android:id="@+id/addInstagram"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="+Add"
+                                    android:textSize="14sp"
+                                    android:textColor="@android:color/holo_blue_dark"
+                                    android:layout_marginTop="8dp"
+                                    android:layout_gravity="center"/>
+                            </LinearLayout>
+
+                            &lt;!&ndash; Facebook Section &ndash;&gt;
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="vertical"
+                                android:gravity="center_horizontal">
+
+                                <TextView
+                                    android:id="@+id/facebookTitle"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Facebook"
+                                    android:textSize="16sp"
+                                    android:textStyle="bold"
+                                    android:textColor="?attr/colorPrimaryText"
+                                    android:layout_gravity="center"/>
+
+                                <TextView
+                                    android:id="@+id/addFacebook"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="+Add"
+                                    android:textSize="14sp"
+                                    android:textColor="@android:color/holo_blue_dark"
+                                    android:layout_marginTop="8dp"
+                                    android:layout_gravity="center"/>
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>-->
+
+
+
+                <!-- Health Section - Card -->
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    app:cardCornerRadius="12dp"
+                    app:cardElevation="4dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="16dp">
+
+                        <!-- Title and Chevron Row for Health Card -->
+
+                        <!-- Horizontal Rule -->
+                        <LinearLayout
+                            android:id="@+id/healthHeader"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            android:padding="8dp">
+
+                            <!-- Title -->
+                            <TextView
+                                android:id="@+id/healthTitle"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="Health"
+                                android:textColor="?attr/colorPrimaryText"
+                                android:textSize="18sp"
+                                android:textStyle="bold" />
+
+                            <!-- Chevron Icon for Expansion -->
+                            <ImageView
+                                android:id="@+id/healthChevronIcon"
+                                android:layout_width="48dp"
+                                android:layout_height="48dp"
+                                android:contentDescription="Toggle Health Section"
+                                android:src="@drawable/ic_chevron_down"
+                                app:tint="?attr/colorChevron" />
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="2dp"
+                            android:background="?attr/colorChevron" />
+
+                        <!-- Content of Health Section (Initially hidden) -->
+                        <LinearLayout
+                            android:id="@+id/healthContent"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <!-- Veterinarian Contact Section -->
+                            <!-- Header -->
+                            <LinearLayout
+                                android:id="@+id/vetContactHeader"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="8dp"
+                                android:background="?attr/colorSurface"
+                                android:clickable="true"
+                                android:focusable="true"
+                                android:gravity="center_vertical"
+                                android:orientation="horizontal"
+                                android:padding="12dp">
+
+                                <!-- Title -->
+                                <TextView
+                                    android:id="@+id/vetContactTitle"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="Veterinarian Contact"
+                                    android:textColor="?attr/colorPrimaryText"
+                                    android:textSize="16sp"
+                                    android:textStyle="bold" />
+
+                                <!-- Chevron for Expansion -->
+                                <ImageView
+                                    android:id="@+id/vetContactChevronIcon"
+                                    android:layout_width="48dp"
+                                    android:layout_height="48dp"
+                                    android:contentDescription="Toggle Veterinarian Contact Section"
+                                    android:src="@drawable/ic_chevron_down"
+                                    app:tint="?attr/colorChevron" />
+                            </LinearLayout>
+
+                            <!-- Horizontal Rule -->
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:background="?attr/colorChevron" />
+
+                            <!-- Content Container -->
+                            <LinearLayout
+                                android:id="@+id/vetContactContentContainer"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:padding="12dp"
+                                android:visibility="gone">
+
+                                <!-- Veterinarian Name -->
+                                <TextView
+                                    android:id="@+id/vetName"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginBottom="4dp"
+                                    android:text="No information for Veterinarian found."
+                                    android:textColor="?attr/colorPrimaryText"
+                                    android:textSize="14sp" />
+
+                                <!-- Veterinarian Address Line 1 -->
+                                <TextView
+                                    android:id="@+id/vetAddress1"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text=""
+                                    android:textColor="?attr/colorPrimaryText"
+                                    android:textSize="14sp"
+                                    android:visibility="gone" />
+
+                                <!-- Veterinarian Address Line 2 -->
+                                <TextView
+                                    android:id="@+id/vetAddress2"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text=""
+                                    android:textColor="?attr/colorPrimaryText"
+                                    android:textSize="14sp"
+                                    android:visibility="gone" />
+
+                                <!-- Veterinarian City, State and Zip -->
+                                <TextView
+                                    android:id="@+id/vetCityStateZip"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text=""
+                                    android:textColor="?attr/colorPrimaryText"
+                                    android:textSize="14sp"
+                                    android:visibility="gone" />
+
+                                <!-- Veterinarian Email -->
+                                <TextView
+                                    android:id="@+id/vetEmail"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="4dp"
+                                    android:text=""
+                                    android:textColor="?attr/colorPrimaryText"
+                                    android:textSize="14sp"
+                                    android:visibility="gone" />
+
+                                <!-- Edit Icon -->
+                                <LinearLayout
+                                    android:id="@+id/vetContactEditContainer"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="8dp"
+                                    android:clickable="true"
+                                    android:focusable="true"
+                                    android:gravity="center_vertical"
+                                    android:orientation="horizontal">
+
+                                    <View
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1" />
+
+                                    <!-- Edit Icon -->
+                                    <ImageView
+                                        android:id="@+id/editVetContactIcon"
+                                        android:layout_width="24dp"
+                                        android:layout_height="24dp"
+                                        android:contentDescription="Edit Veterinarian Contact"
+                                        android:src="@drawable/edit"
+                                        app:tint="?attr/colorPrimaryText" />
+                                </LinearLayout>
+                            </LinearLayout>
+
+
+                            <!-- Microchip Number Section -->
+                            <!-- Header -->
+                            <LinearLayout
+                                android:id="@+id/microchipHeader"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="8dp"
+                                android:background="?attr/colorSurface"
+                                android:clickable="true"
+                                android:focusable="true"
+                                android:gravity="center_vertical"
+                                android:orientation="horizontal"
+                                android:padding="12dp">
+
+                                <!-- Title -->
+                                <TextView
+                                    android:id="@+id/microchipTitle"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="Microchip Number"
+                                    android:textColor="?attr/colorPrimaryText"
+                                    android:textSize="16sp"
+                                    android:textStyle="bold" />
+
+                                <!-- Chevron for Expansion -->
+                                <ImageView
+                                    android:id="@+id/microchipChevronIcon"
+                                    android:layout_width="48dp"
+                                    android:layout_height="48dp"
+
+                                    android:contentDescription="Toggle Microchip Section"
+                                    android:src="@drawable/ic_chevron_down"
+                                    app:tint="?attr/colorChevron" />
+                            </LinearLayout>
+
+                            <!-- Horizontal Rule -->
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:background="?attr/colorChevron" />
+
+                            <!-- Content Container -->
+                            <LinearLayout
+                                android:id="@+id/microchipContentContainer"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_vertical"
+                                android:orientation="horizontal"
+                                android:padding="12dp"
+                                android:visibility="gone">
+
+                                <!-- Microchip Content -->
+                                <TextView
+                                    android:id="@+id/microchipInfo"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="No information for Microchip Number found."
+                                    android:textSize="14sp" />
+
+                                <!-- Edit Icon -->
+                                <ImageView
+                                    android:id="@+id/editMicrochipIcon"
+                                    android:layout_width="24dp"
+                                    android:layout_height="24dp"
+                                    android:clickable="true"
+                                    android:contentDescription="Edit Microchip Number"
+                                    android:focusable="true"
+                                    android:src="@drawable/edit"
+                                    app:tint="?attr/colorPrimaryText" />
+                            </LinearLayout>
+
+                            <!-- Tattoo Section -->
+                            <!-- Header -->
+                            <LinearLayout
+                                android:id="@+id/tattooHeader"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="8dp"
+                                android:background="?attr/colorSurface"
+                                android:clickable="true"
+                                android:focusable="true"
+                                android:gravity="center_vertical"
+                                android:orientation="horizontal"
+                                android:padding="12dp">
+
+                                <!-- Title -->
+                                <TextView
+                                    android:id="@+id/tattooTitle"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="Tattoo"
+                                    android:textColor="?attr/colorPrimaryText"
+                                    android:textSize="16sp"
+                                    android:textStyle="bold" />
+
+                                <!-- Chevron for Expansion -->
+                                <ImageView
+                                    android:id="@+id/tattooChevronIcon"
+                                    android:layout_width="48dp"
+                                    android:layout_height="48dp"
+
+                                    android:contentDescription="Toggle Tattoo Section"
+                                    android:src="@drawable/ic_chevron_down"
+                                    app:tint="?attr/colorChevron" />
+                            </LinearLayout>
+
+                            <!-- Horizontal Rule -->
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:background="?attr/colorChevron" />
+
+                            <!-- Content Container -->
+                            <LinearLayout
+                                android:id="@+id/tattooContentContainer"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_vertical"
+                                android:orientation="horizontal"
+                                android:padding="12dp"
+                                android:visibility="gone">
+
+                                <!-- Tattoo Content -->
+                                <TextView
+                                    android:id="@+id/tattooInfo"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="No information for Tattoo found."
+                                    android:textSize="14sp" />
+
+                                <!-- Edit Icon -->
+                                <ImageView
+                                    android:id="@+id/editTattooIcon"
+                                    android:layout_width="24dp"
+                                    android:layout_height="24dp"
+                                    android:clickable="true"
+                                    android:contentDescription="Edit Tattoo"
+                                    android:focusable="true"
+                                    android:src="@drawable/edit"
+                                    app:tint="?attr/colorPrimaryText" />
+                            </LinearLayout>
+
+                            <!-- Allergies Section -->
+                            <!-- Header -->
+                            <LinearLayout
+                                android:id="@+id/allergiesHeader"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="8dp"
+                                android:background="?attr/colorSurface"
+                                android:clickable="true"
+                                android:focusable="true"
+                                android:gravity="center_vertical"
+                                android:orientation="horizontal"
+                                android:padding="12dp">
+
+                                <!-- Title -->
+                                <TextView
+                                    android:id="@+id/allergiesTitle"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="Allergies"
+                                    android:textColor="?attr/colorPrimaryText"
+                                    android:textSize="16sp"
+                                    android:textStyle="bold" />
+
+                                <!-- Chevron for Expansion -->
+                                <ImageView
+                                    android:id="@+id/allergiesChevronIcon"
+                                    android:layout_width="48dp"
+                                    android:layout_height="48dp"
+
+                                    android:contentDescription="Toggle Allergies Section"
+                                    android:src="@drawable/ic_chevron_down"
+                                    app:tint="?attr/colorChevron" />
+                            </LinearLayout>
+
+                            <!-- Horizontal Rule -->
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:background="?attr/colorChevron" />
+
+                            <!-- Content Container -->
+                            <LinearLayout
+                                android:id="@+id/allergiesContentContainer"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_vertical"
+                                android:orientation="horizontal"
+                                android:padding="12dp"
+                                android:visibility="gone">
+
+                                <!-- Allergies Content -->
+                                <TextView
+                                    android:id="@+id/allergiesInfo"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="No information for Allergies found."
+                                    android:textSize="14sp" />
+
+                                <!-- Edit Icon -->
+                                <ImageView
+                                    android:id="@+id/editAllergiesIcon"
+                                    android:layout_width="24dp"
+                                    android:layout_height="24dp"
+                                    android:clickable="true"
+                                    android:contentDescription="Edit Allergies"
+                                    android:focusable="true"
+                                    android:src="@drawable/edit"
+                                    app:tint="?attr/colorPrimaryText" />
+                            </LinearLayout>
+
+                            <!-- Health Conditions Section -->
+                            <!-- Header -->
+                            <LinearLayout
+                                android:id="@+id/healthConditionsHeader"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="8dp"
+                                android:background="?attr/colorSurface"
+                                android:clickable="true"
+                                android:focusable="true"
+                                android:gravity="center_vertical"
+                                android:orientation="horizontal"
+                                android:padding="12dp">
+
+                                <!-- Title -->
+                                <TextView
+                                    android:id="@+id/healthConditionsTitle"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="Health Conditions"
+                                    android:textColor="?attr/colorPrimaryText"
+                                    android:textSize="16sp"
+                                    android:textStyle="bold" />
+
+                                <!-- Chevron for Expansion -->
+                                <ImageView
+                                    android:id="@+id/healthConditionsChevronIcon"
+                                    android:layout_width="48dp"
+                                    android:layout_height="48dp"
+
+                                    android:contentDescription="Toggle Health Conditions Section"
+                                    android:src="@drawable/ic_chevron_down"
+                                    app:tint="?attr/colorChevron" />
+                            </LinearLayout>
+
+                            <!-- Horizontal Rule -->
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:background="?attr/colorChevron" />
+
+                            <!-- Content Container -->
+                            <LinearLayout
+                                android:id="@+id/healthConditionsContentContainer"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_vertical"
+                                android:orientation="horizontal"
+                                android:padding="12dp"
+                                android:visibility="gone">
+
+                                <!-- Health Conditions Content -->
+                                <TextView
+                                    android:id="@+id/healthConditionsInfo"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="No information for Health Conditions found."
+                                    android:textSize="14sp" />
+
+                                <!-- Edit Icon -->
+                                <ImageView
+                                    android:id="@+id/editHealthConditionsIcon"
+                                    android:layout_width="24dp"
+                                    android:layout_height="24dp"
+                                    android:clickable="true"
+                                    android:contentDescription="Edit Health Conditions"
+                                    android:focusable="true"
+                                    android:src="@drawable/edit"
+                                    app:tint="?attr/colorPrimaryText" />
+                            </LinearLayout>
+
+                            <!-- Medications Section -->
+                            <!-- Header -->
+                            <LinearLayout
+                                android:id="@+id/medicationsHeader"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="8dp"
+                                android:background="?attr/colorSurface"
+                                android:clickable="true"
+                                android:focusable="true"
+                                android:gravity="center_vertical"
+                                android:orientation="horizontal"
+                                android:padding="12dp">
+
+                                <!-- Title -->
+                                <TextView
+                                    android:id="@+id/medicationsTitle"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="Medications"
+                                    android:textColor="?attr/colorPrimaryText"
+                                    android:textSize="16sp"
+                                    android:textStyle="bold" />
+
+                                <!-- Chevron for Expansion -->
+                                <ImageView
+                                    android:id="@+id/medicationsChevronIcon"
+                                    android:layout_width="48dp"
+                                    android:layout_height="48dp"
+
+                                    android:contentDescription="Toggle Medications Section"
+                                    android:src="@drawable/ic_chevron_down"
+                                    app:tint="?attr/colorChevron" />
+                            </LinearLayout>
+
+                            <!-- Horizontal Rule -->
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:background="?attr/colorChevron" />
+
+                            <!-- Content Container -->
+                            <LinearLayout
+                                android:id="@+id/medicationsContentContainer"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_vertical"
+                                android:orientation="horizontal"
+                                android:padding="12dp"
+                                android:visibility="gone">
+
+                                <!-- Medications Content -->
+                                <TextView
+                                    android:id="@+id/medicationsInfo"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="No information for Medications found."
+                                    android:textSize="14sp" />
+
+                                <!-- Edit Icon -->
+                                <ImageView
+                                    android:id="@+id/editMedicationsIcon"
+                                    android:layout_width="24dp"
+                                    android:layout_height="24dp"
+                                    android:clickable="true"
+                                    android:contentDescription="Edit Medications"
+                                    android:focusable="true"
+                                    android:src="@drawable/edit"
+                                    app:tint="?attr/colorPrimaryText" />
+                            </LinearLayout>
+
+                            <!-- Vaccinations Section -->
+                            <!-- Header -->
+                            <LinearLayout
+                                android:id="@+id/vaccinationsHeader"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="8dp"
+                                android:background="?attr/colorSurface"
+                                android:clickable="true"
+                                android:focusable="true"
+                                android:gravity="center_vertical"
+                                android:orientation="horizontal"
+                                android:padding="12dp">
+
+                                <!-- Title -->
+                                <TextView
+                                    android:id="@+id/vaccinationsTitle"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="Vaccinations"
+                                    android:textColor="?attr/colorPrimaryText"
+                                    android:textSize="16sp"
+                                    android:textStyle="bold" />
+
+                                <!-- Chevron for Expansion -->
+                                <ImageView
+                                    android:id="@+id/vaccinationsChevronIcon"
+                                    android:layout_width="48dp"
+                                    android:layout_height="48dp"
+
+                                    android:contentDescription="Toggle Vaccinations Section"
+                                    android:src="@drawable/ic_chevron_down"
+                                    app:tint="?attr/colorChevron" />
+                            </LinearLayout>
+
+                            <!-- Horizontal Rule -->
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:background="?attr/colorChevron" />
+
+                            <!-- Content Container -->
+                            <LinearLayout
+                                android:id="@+id/vaccinationsContentContainer"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_vertical"
+                                android:orientation="horizontal"
+                                android:padding="12dp"
+                                android:visibility="gone">
+
+                                <!-- Vaccinations Content -->
+                                <TextView
+                                    android:id="@+id/vaccinationsInfo"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="No information for Vaccinations found."
+                                    android:textSize="14sp" />
+
+                                <!-- Edit Icon -->
+                                <ImageView
+                                    android:id="@+id/editVaccinationsIcon"
+                                    android:layout_width="24dp"
+                                    android:layout_height="24dp"
+                                    android:clickable="true"
+                                    android:contentDescription="Edit Vaccinations"
+                                    android:focusable="true"
+                                    android:src="@drawable/edit"
+                                    app:tint="?attr/colorPrimaryText" />
+                            </LinearLayout>
+
+                        </LinearLayout>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+
+                <!-- Privacy Settings Section - Card -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/privacySettingsCard"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    app:cardCornerRadius="12dp"
+                    app:cardElevation="4dp">
+
+                    <LinearLayout
+                        android:id="@+id/privacySettingsContainer"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="16dp">
+
+                        <!-- Header -->
+                        <LinearLayout
+                            android:id="@+id/privacySettingsHeader"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:gravity="center_vertical"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:padding="8dp">
+
+                            <!-- Title -->
+                            <TextView
+                                android:id="@+id/privacySettingsTitle"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="Privacy Settings"
+                                android:textSize="18sp"
+                                android:textStyle="bold"
+                                android:textColor="?attr/colorPrimaryText" />
+
+                            <!-- Chevron Icon for Expansion -->
+                            <ImageView
+                                android:id="@+id/privacySettingsChevronIcon"
+                                android:layout_width="48dp"
+                                android:layout_height="48dp"
+
+                                android:src="@drawable/ic_chevron_down"
+                                android:contentDescription="Toggle Privacy Settings Section"
+                                app:tint="?attr/colorChevron" />
+                        </LinearLayout>
+
+                        <!-- Horizontal Rule -->
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="2dp"
+                            android:background="?attr/colorChevron" />
+
+                        <!-- Content of Privacy Settings Section (Initially hidden) -->
+                        <LinearLayout
+                            android:id="@+id/privacySettingsContent"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:visibility="gone">
+
+                            <!-- Breed Privacy Toggle -->
+                            <LinearLayout
+                                android:id="@+id/privacyBreedContainer"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:gravity="center_vertical"
+                                android:paddingVertical="12dp">
+
+                                <!-- Label -->
+                                <TextView
+                                    android:id="@+id/privacyBreedLabel"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="Hide Breed"
+                                    android:textSize="16sp"
+                                    android:textColor="?attr/colorPrimaryText" />
+
+                                <!-- Toggle Switch -->
+                                <Switch
+                                    android:id="@+id/privacyBreedSwitch"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:checked="false" />
+                            </LinearLayout>
+
+                            <!-- Divider -->
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:background="?attr/colorChevron" />
+
+                            <!-- Gender Privacy Toggle -->
+                            <LinearLayout
+                                android:id="@+id/privacyGenderContainer"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:gravity="center_vertical"
+                                android:paddingVertical="12dp">
+
+                                <!-- Label -->
+                                <TextView
+                                    android:id="@+id/privacyGenderLabel"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="Hide Gender"
+                                    android:textSize="16sp"
+                                    android:textColor="?attr/colorPrimaryText" />
+
+                                <!-- Toggle Switch -->
+                                <Switch
+                                    android:id="@+id/privacyGenderSwitch"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:checked="false" />
+                            </LinearLayout>
+
+                            <!-- Divider -->
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:background="?attr/colorChevron" />
+
+                            <!-- Birthday Privacy Toggle -->
+                            <LinearLayout
+                                android:id="@+id/privacyBirthdayContainer"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:gravity="center_vertical"
+                                android:paddingVertical="12dp">
+
+                                <!-- Label -->
+                                <TextView
+                                    android:id="@+id/privacyBirthdayLabel"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="Hide Birthday"
+                                    android:textSize="16sp"
+                                    android:textColor="?attr/colorPrimaryText" />
+
+                                <!-- Toggle Switch -->
+                                <Switch
+                                    android:id="@+id/privacyBirthdaySwitch"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:checked="false" />
+                            </LinearLayout>
+
+                            <!-- Divider -->
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:background="?attr/colorChevron" />
+
+                            <!-- Notes Privacy Toggle -->
+                            <LinearLayout
+                                android:id="@+id/privacyNotesContainer"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:gravity="center_vertical"
+                                android:paddingVertical="12dp">
+
+                                <!-- Label -->
+                                <TextView
+                                    android:id="@+id/privacyNotesLabel"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="Hide Notes"
+                                    android:textSize="16sp"
+                                    android:textColor="?attr/colorPrimaryText" />
+
+                                <!-- Toggle Switch -->
+                                <Switch
+                                    android:id="@+id/privacyNotesSwitch"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:checked="false" />
+                            </LinearLayout>
+
+                            <!-- Divider -->
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:background="?attr/colorChevron" />
+
+                            <!-- Tattoo Privacy Toggle -->
+                            <LinearLayout
+                                android:id="@+id/privacyTattooContainer"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:gravity="center_vertical"
+                                android:paddingVertical="12dp">
+
+                                <!-- Label -->
+                                <TextView
+                                    android:id="@+id/privacyTattooLabel"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="Hide Tattoo"
+                                    android:textSize="16sp"
+                                    android:textColor="?attr/colorPrimaryText" />
+
+                                <!-- Toggle Switch -->
+                                <Switch
+                                    android:id="@+id/privacyTattooSwitch"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:checked="false" />
+                            </LinearLayout>
+
+                            <!-- Divider -->
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:background="?attr/colorChevron" />
+
+                            <!-- Microchip Privacy Toggle -->
+                            <LinearLayout
+                                android:id="@+id/privacyMicrochipContainer"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:gravity="center_vertical"
+                                android:paddingVertical="12dp">
+
+                                <!-- Label -->
+                                <TextView
+                                    android:id="@+id/privacyMicrochipLabel"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="Hide Microchip Number"
+                                    android:textSize="16sp"
+                                    android:textColor="?attr/colorPrimaryText" />
+
+                                <!-- Toggle Switch -->
+                                <Switch
+                                    android:id="@+id/privacyMicrochipSwitch"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:checked="false" />
+                            </LinearLayout>
+
+                            <!-- Divider -->
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:background="?attr/colorChevron" />
+
+                            <!-- Spayed/Neutered Privacy Toggle -->
+                            <LinearLayout
+                                android:id="@+id/privacySpayedContainer"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:gravity="center_vertical"
+                                android:paddingVertical="12dp">
+
+                                <!-- Label -->
+                                <TextView
+                                    android:id="@+id/privacySpayedLabel"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="Hide Spayed/Neutered Status"
+                                    android:textSize="16sp"
+                                    android:textColor="?attr/colorPrimaryText" />
+
+                                <!-- Toggle Switch -->
+                                <Switch
+                                    android:id="@+id/privacySpayedSwitch"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:checked="false" />
+                            </LinearLayout>
+
+                            <!-- Divider -->
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:background="?attr/colorChevron" />
+
+                            <!-- Owner Last Name Privacy Toggle -->
+                            <LinearLayout
+                                android:id="@+id/privacyOwnerLastNameContainer"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:gravity="center_vertical"
+                                android:paddingVertical="12dp">
+
+                                <!-- Label -->
+                                <TextView
+                                    android:id="@+id/privacyOwnerLastNameLabel"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="Hide Owner's Last Name"
+                                    android:textSize="16sp"
+                                    android:textColor="?attr/colorPrimaryText" />
+
+                                <!-- Toggle Switch -->
+                                <Switch
+                                    android:id="@+id/privacyOwnerLastNameSwitch"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:checked="false" />
+                            </LinearLayout>
+
+                            <!-- Divider -->
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:background="?attr/colorChevron" />
+
+                            <!-- Owner Cell Privacy Toggle -->
+                            <LinearLayout
+                                android:id="@+id/privacyOwnerCellContainer"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:gravity="center_vertical"
+                                android:paddingVertical="12dp">
+
+                                <!-- Label -->
+                                <TextView
+                                    android:id="@+id/privacyOwnerCellLabel"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="Hide Owner's Cell Number"
+                                    android:textSize="16sp"
+                                    android:textColor="?attr/colorPrimaryText" />
+
+                                <!-- Toggle Switch -->
+                                <Switch
+                                    android:id="@+id/privacyOwnerCellSwitch"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:checked="false" />
+                            </LinearLayout>
+
+                            <!-- Divider -->
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:background="?attr/colorChevron" />
+
+                            <!-- Address Privacy Toggle -->
+                            <LinearLayout
+                                android:id="@+id/privacyAddressContainer"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:gravity="center_vertical"
+                                android:paddingVertical="12dp">
+
+                                <!-- Label -->
+                                <TextView
+                                    android:id="@+id/privacyAddressLabel"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="Hide Address"
+                                    android:textSize="16sp"
+                                    android:textColor="?attr/colorPrimaryText" />
+
+                                <!-- Toggle Switch -->
+                                <Switch
+                                    android:id="@+id/privacyAddressSwitch"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:checked="false" />
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+
+
+
+
+                <!-- Scans Section - Card -->
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="12dp"
+                    app:cardElevation="4dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="8dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="16dp">
+
+                        <!-- Title and Chevron Row -->
+                        <LinearLayout
+                            android:id="@+id/scanHeader"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:gravity="center_vertical"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:padding="8dp">
+
+                            <!-- Title -->
+                            <TextView
+                                android:id="@+id/scanTitle"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="Scans"
+                                android:textSize="18sp"
+                                android:textStyle="bold"
+                                android:textColor="?attr/colorPrimaryText"/>
+
+                            <!-- Chevron (Up/Down Toggle) -->
+                            <ImageView
+                                android:id="@+id/scanChevronIcon"
+                                android:layout_width="48dp"
+                                android:layout_height="48dp"
+                                android:src="@drawable/ic_chevron_down"
+                                android:contentDescription="Toggle Section"
+                                app:tint="?attr/colorChevron" />
+
+                        </LinearLayout>
+
+                        <!-- Horizontal Rule -->
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="2dp"
+                            android:background="?attr/colorChevron" />
+
+                        <!-- Add this RecyclerView for the collapsible Scans list -->
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/scansContent"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:visibility="gone" />
+
+                        <!-- TextView for fallback if there are no scans -->
+                        <TextView
+                            android:id="@+id/noScansPlaceholder"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/no_scans_message"
+                            android:textColor="?attr/colorPrimaryText"
+                            android:textSize="16sp"
+                            android:visibility="gone"
+                            android:gravity="center"
+                            android:padding="16dp" />
+
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+
+
+
+                <!-- Gallery Section - Card -->
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="12dp"
+                    app:cardElevation="4dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="8dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="16dp">
+
+                        <!-- Title and Chevron Row -->
+                        <LinearLayout
+                            android:id="@+id/galleryHeader"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:gravity="center_vertical"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:padding="8dp">
+
+                            <!-- Title -->
+                            <TextView
+                                android:id="@+id/galleryTitle"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="Gallery"
+                                android:textSize="18sp"
+                                android:textStyle="bold"
+                                android:textColor="?attr/colorPrimaryText"/>
+
+                            <!-- Chevron (Up/Down Toggle) -->
+                            <ImageView
+                                android:id="@+id/galleryChevronIcon"
+                                android:layout_width="48dp"
+                                android:layout_height="48dp"
+                                android:src="@drawable/ic_chevron_down"
+                                android:contentDescription="Toggle Section"
+                                app:tint="?attr/colorChevron" />
+
+                        </LinearLayout>
+
+                        <!-- Horizontal Rule -->
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="2dp"
+                            android:background="?attr/colorChevron" />
+
+                        <!-- RecyclerView for Gallery Content -->
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/galleryContent"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:visibility="gone"
+                            android:orientation="horizontal" />
+
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <!-- Document Section - Card -->
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="12dp"
+                    app:cardElevation="4dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="8dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="16dp">
+
+                        <!-- Title and Chevron Row -->
+                        <LinearLayout
+                            android:id="@+id/documentsHeader"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:gravity="center_vertical"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:padding="8dp">
+
+                            <!-- Title -->
+                            <TextView
+                                android:id="@+id/documentsTitle"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="Documents"
+                                android:textSize="18sp"
+                                android:textStyle="bold"
+                                android:textColor="?attr/colorPrimaryText"/>
+
+                            <!-- Chevron (Up/Down Toggle) -->
+                            <ImageView
+                                android:id="@+id/documentsChevronIcon"
+                                android:layout_width="48dp"
+                                android:layout_height="48dp"
+                                android:src="@drawable/ic_chevron_down"
+                                android:contentDescription="Toggle Section"
+                                app:tint="?attr/colorChevron" />
+
+                        </LinearLayout>
+
+                        <!-- Horizontal Rule -->
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="2dp"
+                            android:background="?attr/colorChevron" />
+
+                        <!-- RecyclerView for Documents Content -->
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/documentsContent"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:visibility="gone"
+                            android:orientation="vertical" />
+
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+
+            </LinearLayout>
+        </ScrollView>
+
+    </LinearLayout>
+    <!-- Dim Overlay -->
+    <View
+        android:id="@+id/dimOverlay"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="#80000000"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Progress Bar -->
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="@android:style/Widget.DeviceDefault.Light.ProgressBar.Large"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+

@@ -1,0 +1,51 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base Light Theme -->
+    <style name="Base.Theme.AccessApp" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorBackground">@color/dark_background</item>
+        <item name="colorButtonBackground">@color/dark_buttonBackground</item>
+        <item name="colorPrimary">@color/dark_primaryMed</item>
+        <item name="colorChevron">@color/dark_primaryMed</item>
+        <item name="colorSecondary">@color/dark_secondary_text</item>
+        <item name="colorSurface">@color/dark_primaryLight</item>
+        <item name="colorOnSurface">@color/dark_primaryDark</item>
+        <item name="colorPrimaryText">@color/dark_primaryDark</item>
+        <item name="colorHintText">@color/dark_secondary_text</item>
+        <item name="colorAccent">@color/red</item>
+        <item name="colorTabHeaderBackground">@color/dark_tabHeaderBackground</item>
+        <item name="colorTabBackground">@color/dark_tabBackground</item>
+        <item name="colorButtonText">@color/dark_buttonText</item>
+        <item name="colorPrimaryTextHint">@color/dark_primaryTextHint</item>
+        <item name="colorPrimaryTextBackground">@color/dark_primaryTextBackground</item>
+        <item name="colorInputText">@color/dark_inputText</item>
+        <item name="colorInputTextHint">@color/dark_inputTextHint</item>
+        <item name="colorInputBackground">@color/dark_primaryTextBackground</item>
+        <item name="colorCardStroke">@color/dark_cardStroke</item>
+        <item name="colorCardBackgroundYellow">@color/cardBackgroundYellow</item>
+        <item name="colorCardBackgroundGray">@color/cardBackgroundGray</item>
+
+        <item name="colorIconRegisterPet">@color/colorIconRegisterPet</item>
+        <item name="colorIconPetsRegistered">@color/colorIconPetsRegistered</item>
+        <item name="colorIconTags">@color/colorIconTags</item>
+        <item name="colorIconTagReplacement">@color/colorIconTagReplacement</item>
+        <item name="colorIconSubscriptions">@color/colorIconSubscriptions</item>
+        <item name="colorIconMyAccount">@color/colorIconMyAccount</item>
+        <item name="colorIconMyContacts">@color/colorIconMyContacts</item>
+        <item name="colorIconMyAdmins">@color/colorIconMyAdmins</item>
+        <item name="colorIconMyAddresses">@color/colorIconMyAddresses</item>
+        <item name="colorIconNotifications">@color/colorIconNotifications</item>
+        <item name="colorIconAccessibility">@color/colorIconAccessibility</item>
+        <item name="colorIconMeasurements">@color/colorIconMeasurements</item>
+        <item name="colorIconReportLostPet">@color/colorIconReportLostPet</item>
+        <item name="colorIconPrivacyPolicy">@color/colorIconPrivacyPolicy</item>
+        <item name="colorIconTermsOfUse">@color/colorIconTermsOfUse</item>
+        <item name="colorIconSendFeedback">@color/colorIconSendFeedback</item>
+        <item name="colorIconFAQ">@color/colorIconFAQ</item>
+        <item name="colorCardBackground">@color/dark_cardBackground</item>
+
+        <item name="logoDrawable">@drawable/ellogowhitenobg</item>
+
+    </style>
+
+    <!-- Default Theme -->
+    <style name="Theme.AccessApp" parent="Base.Theme.AccessApp" />
+</resources>

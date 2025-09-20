@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/editFieldLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/rounded_edit_fragment_background"
+    android:padding="16dp">
+
+    <!-- Close Chevron Icon -->
+    <ImageView
+        android:id="@+id/chevronDown"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:src="@drawable/ic_chevron_down"
+        android:contentDescription="Close"
+        android:layout_gravity="end"
+        android:padding="8dp"
+        app:tint="?attr/colorChevron" />
+
+    <!-- Field Title -->
+    <TextView
+        android:id="@+id/editFieldTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Edit Field"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:layout_marginTop="16dp" />
+
+    <!-- ScrollView for Input Fields -->
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp">
+
+        <LinearLayout
+            android:id="@+id/inputContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- EditText for Text Input -->
+            <EditText
+                android:id="@+id/editTextField"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter new value"
+                android:padding="16dp"
+                android:background="@drawable/edit_text_background"
+                android:visibility="gone" />
+
+            <!-- Spinner for Gender and Other Dropdown Fields -->
+            <Spinner
+                android:id="@+id/genderSpinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:layout_marginTop="16dp" />
+
+            <!-- Centered NumberPicker for Pet Weight -->
+            <NumberPicker
+                android:id="@+id/numberPicker1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:visibility="gone" />
+
+
+            <!-- Embedded DatePicker for Pet Birthday -->
+            <DatePicker
+                android:id="@+id/datePicker"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:calendarViewShown="true"
+                android:datePickerMode="calendar"
+                android:layout_marginTop="16dp" />
+
+            <!-- TextView to Display Selected Date -->
+            <TextView
+                android:id="@+id/selectedDateTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Selected Date: "
+                android:textSize="16sp"
+                android:layout_marginTop="16dp"
+                android:visibility="gone" />
+
+            <!-- Veterinarian Contact Container -->
+            <LinearLayout
+                android:id="@+id/vetContactContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <!-- VET NAME -->
+                <TextView
+                    android:id="@+id/vetNameLabel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Veterinarian Name"
+                    android:textStyle="bold"
+                    android:textSize="14sp"
+                    android:layout_marginTop="16dp" />
+
+                <EditText
+                    android:id="@+id/vetNameField"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Veterinarian Name"
+                    android:padding="16dp"
+                    android:background="@drawable/edit_text_background"
+                    android:layout_marginTop="8dp" />
+
+                <!-- ADDRESS 1 -->
+                <TextView
+                    android:id="@+id/vetAddress1Label"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Address Line 1"
+                    android:textStyle="bold"
+                    android:textSize="14sp"
+                    android:layout_marginTop="16dp" />
+
+                <EditText
+                    android:id="@+id/vetAddress1Field"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Address Line 1"
+                    android:padding="16dp"
+                    android:background="@drawable/edit_text_background"
+                    android:layout_marginTop="8dp" />
+
+                <!-- ADDRESS 2 -->
+                <TextView
+                    android:id="@+id/vetAddress2Label"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Address Line 2 (Optional)"
+                    android:textStyle="bold"
+                    android:textSize="14sp"
+                    android:layout_marginTop="16dp" />
+
+                <EditText
+                    android:id="@+id/vetAddress2Field"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Address Line 2 (Optional)"
+                    android:padding="16dp"
+                    android:background="@drawable/edit_text_background"
+                    android:layout_marginTop="8dp" />
+
+                <!-- CITY -->
+                <TextView
+                    android:id="@+id/vetCityLabel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="City"
+                    android:textStyle="bold"
+                    android:textSize="14sp"
+                    android:layout_marginTop="16dp" />
+
+                <EditText
+                    android:id="@+id/vetCityField"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="City"
+                    android:padding="16dp"
+                    android:background="@drawable/edit_text_background"
+                    android:layout_marginTop="8dp" />
+
+                <!-- STATE -->
+                <TextView
+                    android:id="@+id/vetStateLabel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="State"
+                    android:textStyle="bold"
+                    android:textSize="14sp"
+                    android:layout_marginTop="16dp" />
+
+                <EditText
+                    android:id="@+id/vetStateField"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="State"
+                    android:padding="16dp"
+                    android:background="@drawable/edit_text_background"
+                    android:layout_marginTop="8dp" />
+
+                <!-- ZIP CODE -->
+                <TextView
+                    android:id="@+id/vetZipLabel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Zip Code"
+                    android:textStyle="bold"
+                    android:textSize="14sp"
+                    android:layout_marginTop="16dp" />
+
+                <EditText
+                    android:id="@+id/vetZipField"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Zip Code"
+                    android:padding="16dp"
+                    android:background="@drawable/edit_text_background"
+                    android:layout_marginTop="8dp" />
+
+                <!-- EMAIL -->
+                <TextView
+                    android:id="@+id/vetEmailLabel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Email"
+                    android:textStyle="bold"
+                    android:textSize="14sp"
+                    android:layout_marginTop="16dp" />
+
+                <EditText
+                    android:id="@+id/vetEmailField"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Email"
+                    android:inputType="textEmailAddress"
+                    android:padding="16dp"
+                    android:background="@drawable/edit_text_background"
+                    android:layout_marginTop="8dp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Button Container at the Bottom -->
+    <LinearLayout
+        android:id="@+id/buttonContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/cancelButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Cancel"
+            android:textSize="18sp"
+            android:backgroundTint="@color/red"
+            android:textColor="@android:color/white" />
+
+        <View
+            android:layout_width="16dp"
+            android:layout_height="match_parent" />
+
+        <Button
+            android:id="@+id/saveButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Save"
+            android:textSize="18sp"
+            android:backgroundTint="?attr/colorButtonBackground"
+            android:textColor="@android:color/white" />
+
+    </LinearLayout>
+
+</LinearLayout>

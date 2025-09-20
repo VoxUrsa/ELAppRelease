@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="spacingMain">15dp</dimen>
+    <dimen name="spacingList">48dp</dimen>
+    <dimen name="spacingListTop">10dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="gallery_image_size">100dp</dimen>
+    <dimen name="gallery_image_margin">8dp</dimen>
+
+</resources>

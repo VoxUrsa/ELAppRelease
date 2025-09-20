@@ -1,0 +1,82 @@
+<resources>
+    <!-- Hard Code Colors -->
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="red">#FFE63946</color>
+    <color name="colorRed">#FFE63946</color>
+    <color name="grey99">#FF999999</color>
+    <color name="grey66">#FF666666</color>
+    <color name="greyCC">#FFCCCCCC</color>
+    <color name="colorButtonBackground">#457B9D</color>
+    <color name="colorIconRegisterPet">#ff6420</color>
+    <color name="colorIconPetsRegistered">#007006</color>
+    <color name="colorIconTags">#1a9ec3</color>
+    <color name="colorIconTagReplacement">#3d2fcf</color>
+    <color name="colorIconSubscriptions">#8f0254</color>
+    <color name="colorIconMyAccount">#d33017</color>
+    <color name="colorIconMyContacts">#cca000</color>
+    <color name="colorIconMyAdmins">#629613</color>
+    <color name="colorIconMyAddresses">#5b5e8a</color>
+    <color name="colorIconNotifications">#0c6091</color>
+    <color name="colorIconAccessibility">#006c00</color>
+    <color name="colorIconMeasurements">#d2903c</color>
+    <color name="colorIconReportLostPet">#e17b6b</color>
+    <color name="colorIconPrivacyPolicy">#00a5a4</color>
+    <color name="colorIconTermsOfUse">#3835df</color>
+    <color name="colorIconSendFeedback">#fb9814</color>
+    <color name="colorIconFAQ">#d682e8</color>
+    <color name="background_light">#F5F5F5</color>
+    <color name="primary">#3F51B5</color>
+    <color name="cardBackgroundYellow">#FFF9C4</color>
+    <color name="cardBackgroundGray">#F5F5F5</color>
+
+
+    <!-- Light Mode Colors -->
+    <color name="primaryMed">#FF457B9D</color>
+    <color name="primaryLight">#FFD2F5F6</color>
+    <color name="background">#F1FAEE</color>
+    <color name="primaryDark">#FF1D3557</color>
+    <color name="primaryDarkText">#FF1D3557</color>
+    <color name="primaryDarkTextBackground">#DDDDDD</color>
+    <color name="primaryTextBackground">#DDDDDD</color>
+    <color name="primaryDarkTextHint">#FF457B9D</color>
+    <color name="primaryTextHint">#FF457B9D</color>
+    <color name="secondary_text">#FF457B9D</color>
+    <color name="tabHeaderBackground">#FF1D3557</color>
+    <color name="tabBackground">#F1FAEE</color>
+    <color name="buttonBackground">#FF1D3557</color>
+    <color name="buttonBarBackground">#FFFFFFFF</color>
+    <color name="buttonText">#FFFFFFFF</color>
+    <color name="inputText">#FF1D3557</color>
+    <color name="inputTextHint">#FF457B9D</color>
+    <color name="inputBackground">#FBFBFB</color>
+    <color name="cardStroke">#DDDDDD</color>
+    <color name="cardBackground">#FFFFFF</color>
+    <color name="activeNotification">#FFFFFF</color>
+    <color name="inactiveNotification">#EDEDED</color>
+
+    <!-- Dark Mode Colors -->
+    <color name="dark_primaryMed">#FF457B9D</color>
+    <color name="dark_primaryLight">#FF1D3557</color>
+    <color name="dark_background">#FF1D3557</color>
+    <color name="dark_primaryDark">#FFFFFFFF</color>
+    <color name="dark_primaryDarkText">#FFFFFFFF</color>
+    <color name="dark_primaryDarkTextBackground">#FF1D3557</color>
+    <color name="dark_primaryTextBackground">#DDDDDDDD</color>
+    <color name="dark_primaryDarkTextHint">#FF457B9D</color>
+    <color name="dark_secondary_text">#FF457B9D</color>
+    <color name="dark_tabHeaderBackground">#FFFFFFFF</color>
+    <color name="dark_tabBackground">#FF1D3557</color>
+    <color name="dark_buttonBackground">#FFFFFFFF</color>
+    <color name="dark_buttonBarBackground">#FF1D3557</color>
+    <color name="dark_buttonText">#FF1D3557</color>
+    <color name="dark_primaryTextHint"></color>
+    <color name="dark_inputText">#FF1D3557</color>
+    <color name="dark_inputTextHint">#FF457B9D</color>
+    <color name="dark_inputBackground">#EDEDED</color>
+    <color name="dark_cardStroke">#DDDDDD</color>
+    <color name="dark_cardBackground">#EEEEEE</color>
+
+
+
+</resources>

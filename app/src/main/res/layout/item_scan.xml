@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginBottom="8dp"
+    android:backgroundTint="@color/white"
+    app:cardCornerRadius="16dp"
+    app:cardElevation="4dp">
+
+    <LinearLayout
+        android:id="@+id/scanTopRow"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp" >
+
+        <!-- Row 1: Title and short preview -->
+        <TextView
+            android:id="@+id/scanTitleText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Scan 6 - Precise Location"
+            android:textSize="16sp"
+            android:textColor="@android:color/black"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/scanAddressText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="21830 Recreation Road, Carson, California..."
+            android:textSize="14sp"
+            android:textColor="@android:color/darker_gray"
+            android:layout_marginTop="4dp"/>
+
+        <!-- Expandable Section (hidden by default) -->
+        <LinearLayout
+            android:id="@+id/scanDetailsContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone"
+            android:layout_marginTop="8dp">
+
+            <!-- Row: Date, Device, etc. -->
+            <TextView
+                android:id="@+id/scanDateText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="January 04, 2024, 01:14 PM"
+                android:textSize="14sp"
+                android:textStyle="italic"
+                android:textColor="@android:color/black"/>
+
+            <TextView
+                android:id="@+id/scanDeviceText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Device: AZ7493"
+                android:textSize="14sp"
+                android:layout_marginTop="4dp"
+                android:textColor="@android:color/black"/>
+
+            <!-- Row: latitude/longitude -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="8dp">
+
+                <TextView
+                    android:id="@+id/scanLatitudeText"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/latitude"
+                    android:textColor="@android:color/black"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/scanLongitudeText"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/longitude"
+                    android:textColor="@android:color/black"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <!-- Row: Buttons (View Map + share icon) -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginTop="12dp">
+
+                <Button
+                    android:id="@+id/viewMapButton"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/view_map"
+                    android:textAllCaps="false" />
+
+                <ImageView
+                    android:id="@+id/shareScanIcon"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:src="@drawable/ic_share"
+                    android:contentDescription="@string/share"
+                    android:layout_marginStart="8dp"
+                    app:tint="@android:color/darker_gray"
+                    android:visibility="gone"/>
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

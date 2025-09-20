@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/subscriptionItemLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="12dp"
+    android:gravity="center_vertical">
+
+    <!-- Pet Image and changes for update -->
+    <ImageView
+        android:id="@+id/petImageView"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_marginEnd="12dp"
+        android:contentDescription="@string/desc_pet_image"
+        android:scaleType="centerCrop" />
+
+    <!-- Pet Name -->
+    <TextView
+        android:id="@+id/petNameTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="@string/pet_name"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:paddingEnd="8dp" />
+
+    <!-- RadioButton for selection -->
+    <RadioButton
+        android:id="@+id/petSelectRadio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+</LinearLayout>
