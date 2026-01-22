@@ -179,7 +179,7 @@ This EULA shall be governed by the laws of the United States. Any legal action r
     <string name="first_name_hint">First Name</string>
     <string name="last_name_hint">Last Name</string>
     <string name="cell_phone_hint">Cell Phone Number</string>
-    <string name="email_hint">E-mail</string>
+    <string name="email_hint">Email %1$d</string>
     <string name="save_button_text">Save</string>
     <string name="cancel_button_text">Cancel</string>
 
@@ -599,4 +599,16 @@ This EULA shall be governed by the laws of the United States. Any legal action r
     <string name="external_site_title">Leaving Emergency Leash</string>
     <string name="external_site_message">You’re about to open your browser and visit EmergencyLeash.com. Continue?</string>
     <string name="continue_label">Continue</string>
+
+    <string name="enable_sms_alerts">Enable SMS Alerts</string>
+
+    <string name="sms_alerts_format_line">Format: (123) 456-7890 | A valid Cell Phone Number is required to be displayed on Lost Pet Posters and Public Profile (unless hidden by privacy setting).</string>
+
+    <string name="sms_alerts_description">Enter your mobile number to receive real-time updates when your pet is found and other important Emergency Leash notifications.</string>
+
+    <string name="sms_alerts_bullets">\u2022 Message frequency varies\n\u2022 Message and data rates may apply\n\u2022 Text STOP to cancel\n\u2022 Text HELP for help\n\u2022 Contact: support@emergencyleash.com if you have any questions or issues</string>
+
+    <string name="sms_alerts_consent">By checking "Enable SMS Alerts", you agree to receive text messages from Emergency Leash and accept our Terms of Service and Privacy Policy.</string>
+    <string name="hint_cell_phone_number">Cell Phone Number *</string>
+
 </resources>

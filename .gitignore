@@ -47,3 +47,10 @@ secrets.properties
 
 # Optional: Android Studio miscellany you don't want to chase
 others.xml
+
+# Android build outputs
+/app/build/
+/app/release/
+/app/debug/
+*.apk
+*.aab

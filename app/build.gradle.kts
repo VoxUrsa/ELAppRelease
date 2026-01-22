@@ -6,7 +6,7 @@ plugins {
 
 android {
     namespace = "com.emergencyleash.app"
-    compileSdk = 34
+    compileSdk = 35
     buildFeatures {
         buildConfig = true
         viewBinding = true
@@ -14,8 +14,8 @@ android {
     defaultConfig {
         applicationId = "com.emergencyleash.app"
         minSdk = 24
-        targetSdk = 33
-        versionCode = 1
+        targetSdk = 35
+        versionCode = 3
         versionName = "1.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
