@@ -171,6 +171,7 @@ class SettingsMyAccountActivity : AppCompatActivity() {
         for (i in count..numOfContacts) {
             val contactView = inflater.inflate(R.layout.item_additional_contact, additionalContactsContainer, false)
 
+
             // Set title with the correct contact number starting from 2
             val contactTitle = contactView.findViewById<TextView>(R.id.contactTitle)
             contactTitle.text = getString(R.string.additional_contact, i)
